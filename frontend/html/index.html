@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shrinidhi Totagi | Python Full Stack Developer</title>
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- SPLASH SCREEN -->
+<div id="splashScreen" style="display:none;position:fixed;inset:0;z-index:10000;background:#050505;align-items:center;justify-content:center;flex-direction:column;gap:24px;transition:opacity 0.5s;">
+  <div class="splash-inner">
+    <div class="splash-logo">&lt;<span style="color:#00ffc3">SHRINIDHI</span> /&gt;</div>
+    <p class="splash-sub">// Initializing secure connection…</p>
+    <div class="splash-form">
+      <input id="visitorName" type="text" placeholder="Enter your full name…" autocomplete="off">
+      <button id="enterSite"><i class="fas fa-terminal"></i> Enter</button>
+    </div>
+    <p class="splash-note">Your visit info is collected for analytics purposes.</p>
+  </div>
+</div>
+
+<!-- CANVAS BACKGROUND -->
+<canvas id="bg3d"></canvas>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-ring"></div>
+    <div class="loader-text">INITIALIZING<span class="loader-dots"></span></div>
+    <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+    <div class="loader-percent" id="loaderPercent">0%</div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">&lt;<span class="logo-name">SHRINIDHI</span> /&gt;</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#extracurricular">Extra</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="home">
+  <div class="hero-content">
+    <p class="hero-greeting">// Hello, World! I'm</p>
+    <h1 class="hero-name glitch" data-text="SHRINIDHI TOTAGI">SHRINIDHI TOTAGI</h1>
+    <h2 class="hero-typed">I'm a <span id="typed"></span><span class="typed-cursor">|</span></h2>
+    <p class="hero-desc">BE CSE student building full-stack Python applications and security-aware systems. Passionate about writing clean backend code, crafting intuitive UIs, and applying cybersecurity thinking to everything I build.</p>
+    <div class="hero-btns">
+      <a href="#projects" class="btn btn-primary"><i class="fas fa-rocket"></i> View Projects</a>
+      <a href="#" class="btn btn-outline" download><i class="fas fa-download"></i> Download CV</a>
+    </div>
+    <div class="hero-socials">
+      <a href="https://github.com/ShrinidhiTotagi" target="_blank" class="social-icon"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/shrinidhi-totagi" target="_blank" class="social-icon"><i class="fab fa-linkedin"></i></a>
+      <a href="mailto:shrinidhi@email.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="cyber-sphere" id="cyberSphere">
+      <div class="sphere-ring r1"></div>
+      <div class="sphere-ring r2"></div>
+      <div class="sphere-ring r3"></div>
+      <div class="sphere-core">
+        <img src="../img/profile.png" alt="Shrinidhi" class="profile-pic">
+      </div>
+      <div class="sphere-particle sp1"></div>
+      <div class="sphere-particle sp2"></div>
+      <div class="sphere-particle sp3"></div>
+      <div class="sphere-particle sp4"></div>
+      <div class="sphere-particle sp5"></div>
+      <div class="sphere-particle sp6"></div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar reveal" id="statsBar">
+  <div class="stat-item"><span class="stat-icon"><i class="fas fa-code-branch"></i></span><h3 class="counter" data-target="6">0</h3><p>Projects</p></div>
+  <div class="stat-item"><span class="stat-icon"><i class="fas fa-certificate"></i></span><h3 class="counter" data-target="5">0</h3><p>Certifications</p></div>
+  <div class="stat-item"><span class="stat-icon"><i class="fas fa-briefcase"></i></span><h3 class="counter" data-target="3">0</h3><p>Internships</p></div>
+  <div class="stat-item"><span class="stat-icon"><i class="fas fa-clock"></i></span><h3 class="counter" data-target="500">0</h3><p>Hours Learning</p></div>
+</div>
+
+<!-- ABOUT -->
+<section class="section about-section reveal" id="about">
+  <h2 class="section-title"><span class="st-bracket">[</span> ABOUT ME <span class="st-bracket">]</span></h2>
+  <div class="about-grid">
+    <div class="about-text">
+      <p>I'm a <span class="hl-cyan">BE Computer Science &amp; Engineering student</span> who loves building full-stack Python applications — from fast REST APIs to clean, responsive frontends.</p>
+      <p>I also work in cybersecurity, bringing a security-first mindset to every system I develop. My goal is to become a <span class="hl-purple">Python Full Stack Developer</span> who builds products that are both powerful and secure.</p>
+      <div class="about-chips">
+        <div class="chip chip-cyan"><i class="fas fa-map-marker-alt"></i> India</div>
+        <div class="chip chip-purple"><i class="fas fa-graduation-cap"></i> BE — CSE</div>
+        <div class="chip chip-pink"><i class="fas fa-layer-group"></i> Full Stack Dev</div>
+        <div class="chip chip-yellow"><i class="fas fa-shield-alt"></i> Cybersecurity</div>
+      </div>
+      <div class="about-social-row">
+        <a href="https://github.com/ShrinidhiTotagi" target="_blank" class="asb asb-github"><i class="fab fa-github"></i> GitHub</a>
+        <a href="https://www.linkedin.com/in/shrinidhi-totagi" target="_blank" class="asb asb-linkedin"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      </div>
+    </div>
+    <div class="terminal-box">
+      <div class="terminal-header">
+        <span class="dot dot-red"></span>
+        <span class="dot dot-yellow"></span>
+        <span class="dot dot-green"></span>
+        <span class="terminal-title">shrinidhi@kali:~$</span>
+      </div>
+      <div class="terminal-body" id="terminalBody">
+        <p><span class="prompt">$</span> whoami</p>
+        <p class="out out-cyan">shrinidhi totagi</p>
+        <p><span class="prompt">$</span> cat role.txt</p>
+        <p class="out out-purple">python full stack dev &amp; cybersecurity engineer</p>
+        <p><span class="prompt">$</span> cat skills.txt</p>
+        <p class="out out-pink">Python · FastAPI · React · Security</p>
+        <p><span class="prompt">$</span> cat status.txt</p>
+        <p class="out out-yellow">open to full stack &amp; security roles</p>
+        <p><span class="prompt">$</span> <span class="cursor-blink">_</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section skills-section reveal" id="skills">
+  <h2 class="section-title"><span class="st-bracket">[</span> SKILLS <span class="st-bracket">]</span></h2>
+  <div class="skills-grid">
+    <div class="skill-cat sc-cyan">
+      <h3 class="sk-title sk-cyan"><i class="fas fa-shield-alt"></i> Security</h3>
+      <div class="skill-bar"><div class="skill-label"><span>Network Scanning</span><span class="pct pct-cyan">85%</span></div><div class="bar"><div class="fill fill-cyan" data-width="85"></div></div></div>
+      <div class="skill-bar"><div class="skill-label"><span>Vulnerability Assessment</span><span class="pct pct-cyan">80%</span></div><div class="bar"><div class="fill fill-cyan" data-width="80"></div></div></div>
+      <div class="skill-bar"><div class="skill-label"><span>Log Analysis</span><span class="pct pct-cyan">75%</span></div><div class="bar"><div class="fill fill-cyan" data-width="75"></div></div></div>
+      <div class="skill-bar"><div class="skill-label"><span>Wireshark</span><span class="pct pct-cyan">78%</span></div><div class="bar"><div class="fill fill-cyan" data-width="78"></div></div></div>
+    </div>
+    <div class="skill-cat sc-purple">
+      <h3 class="sk-title sk-purple"><i class="fas fa-code"></i> Programming</h3>
+      <div class="skill-bar"><div class="skill-label"><span>Python</span><span class="pct pct-purple">88%</span></div><div class="bar"><div class="fill fill-purple" data-width="88"></div></div></div>
+      <div class="skill-bar"><div class="skill-label"><span>SQL</span><span class="pct pct-purple">75%</span></div><div class="bar"><div class="fill fill-purple" data-width="75"></div></div></div>
+      <div class="skill-bar"><div class="skill-label"><span>Bash / Linux</span><span class="pct pct-purple">78%</span></div><div class="bar"><div class="fill fill-purple" data-width="78"></div></div></div>
+      <div class="skill-bar"><div class="skill-label"><span>JavaScript</span><span class="pct pct-purple">65%</span></div><div class="bar"><div class="fill fill-purple" data-width="65"></div></div></div>
+    </div>
+    <div class="skill-cat sc-pink">
+      <h3 class="sk-title sk-pink"><i class="fas fa-tools"></i> Tools &amp; Frameworks</h3>
+      <div class="tools-grid">
+        <span class="tool-tag tt-cyan">Nmap</span>
+        <span class="tool-tag tt-purple">Kali Linux</span>
+        <span class="tool-tag tt-pink">Wireshark</span>
+        <span class="tool-tag tt-yellow">FastAPI</span>
+        <span class="tool-tag tt-cyan">React</span>
+        <span class="tool-tag tt-purple">TensorFlow</span>
+        <span class="tool-tag tt-pink">Docker</span>
+        <span class="tool-tag tt-yellow">PostgreSQL</span>
+        <span class="tool-tag tt-cyan">MySQL</span>
+        <span class="tool-tag tt-purple">GitHub</span>
+        <span class="tool-tag tt-pink">VS Code</span>
+        <span class="tool-tag tt-yellow">Linux</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section projects-section reveal" id="projects">
+  <h2 class="section-title"><span class="st-bracket">[</span> PROJECTS <span class="st-bracket">]</span></h2>
+  <div class="projects-grid">
+
+    <div class="project-card pc-cyan" onclick="openModal('chainofcustody')">
+      <div class="card-glow glow-cyan"></div>
+      <div class="card-top">
+        <div class="card-icon-wrap ciw-cyan"><i class="fas fa-link"></i></div>
+        <div class="card-links">
+          <a href="https://github.com/ShrinidhiTotagi" onclick="event.stopPropagation()" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <h3>Digital Evidence Chain-of-Custody</h3>
+      <p>Tamper-proof evidence management system with cryptographic integrity and full audit trail for forensic investigations.</p>
+      <div class="tags"><span class="tg-cyan">Python</span><span class="tg-cyan">FastAPI</span><span class="tg-cyan">PostgreSQL</span></div>
+    </div>
+
+    <div class="project-card pc-purple" onclick="openModal('riskevent')">
+      <div class="card-glow glow-purple"></div>
+      <div class="card-top">
+        <div class="card-icon-wrap ciw-purple"><i class="fas fa-exclamation-triangle"></i></div>
+        <div class="card-links">
+          <a href="https://github.com/ShrinidhiTotagi" onclick="event.stopPropagation()" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <h3>Operational Risk Event Collector</h3>
+      <p>Full-stack platform to collect, categorize, and visualize operational risk events with a React dashboard.</p>
+      <div class="tags"><span class="tg-purple">Python</span><span class="tg-purple">React</span><span class="tg-purple">MySQL</span></div>
+    </div>
+
+    <div class="project-card pc-pink" onclick="openModal('humanrisk')">
+      <div class="card-glow glow-pink"></div>
+      <div class="card-top">
+        <div class="card-icon-wrap ciw-pink"><i class="fas fa-user-shield"></i></div>
+        <div class="card-links">
+          <a href="https://github.com/ShrinidhiTotagi" onclick="event.stopPropagation()" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <h3>Human Risk Monitoring System</h3>
+      <p>Behavioral monitoring system that tracks insider threat indicators and generates risk scores with automated alerts.</p>
+      <div class="tags"><span class="tg-pink">Python</span><span class="tg-pink">Monitoring</span><span class="tg-pink">Security</span></div>
+    </div>
+
+    <div class="project-card pc-yellow" onclick="openModal('darkweb')">
+      <div class="card-glow glow-yellow"></div>
+      <div class="card-top">
+        <div class="card-icon-wrap ciw-yellow"><i class="fas fa-globe"></i></div>
+        <div class="card-links">
+          <a href="https://github.com/ShrinidhiTotagi" onclick="event.stopPropagation()" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <h3>Dark Web Threat Dashboard</h3>
+      <p>Security intelligence dashboard aggregating dark web threat data — leaked credentials, threat actor mentions, and malicious listings.</p>
+      <div class="tags"><span class="tg-yellow">Python</span><span class="tg-yellow">React</span><span class="tg-yellow">OSINT</span></div>
+    </div>
+
+    <div class="project-card pc-cyan" onclick="openModal('stutter')">
+      <div class="card-glow glow-cyan"></div>
+      <div class="card-top">
+        <div class="card-icon-wrap ciw-cyan"><i class="fas fa-brain"></i></div>
+        <div class="card-links">
+          <a href="https://github.com/ShrinidhiTotagi" onclick="event.stopPropagation()" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <h3>Deep Learning Stutter Detection</h3>
+      <p>TensorFlow model that analyzes audio speech samples to detect and classify stuttering patterns in real time.</p>
+      <div class="tags"><span class="tg-cyan">Python</span><span class="tg-cyan">TensorFlow</span><span class="tg-cyan">Deep Learning</span></div>
+    </div>
+
+    <div class="project-card pc-purple" onclick="openModal('nmaptoolkit')">
+      <div class="card-glow glow-purple"></div>
+      <div class="card-top">
+        <div class="card-icon-wrap ciw-purple"><i class="fas fa-network-wired"></i></div>
+        <div class="card-links">
+          <a href="https://github.com/ShrinidhiTotagi" onclick="event.stopPropagation()" target="_blank"><i class="fab fa-github"></i></a>
+        </div>
+      </div>
+      <h3>Nmap Automation Toolkit</h3>
+      <p>Python-based automation wrapper around Nmap for streamlined network recon, custom scan profiles, and structured report generation.</p>
+      <div class="tags"><span class="tg-purple">Python</span><span class="tg-purple">Nmap</span><span class="tg-purple">Bash</span></div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="section certs-section reveal" id="certifications">
+  <h2 class="section-title"><span class="st-bracket">[</span> CERTIFICATIONS <span class="st-bracket">]</span></h2>
+  <div class="certs-grid">
+
+    <div class="cert-card cc-cyan">
+      <div class="cert-icon-wrap ciw-cert-cyan"><i class="fas fa-shield-alt"></i></div>
+      <div class="cert-info">
+        <h3>HP Cybersecurity Foundations</h3>
+        <p>HP</p>
+        <span class="cert-year cy-cyan">2024</span>
+      </div>
+      <span class="cert-badge cb-cyan">Verified ✓</span>
+    </div>
+
+    <div class="cert-card cc-purple">
+      <div class="cert-icon-wrap ciw-cert-purple"><i class="fas fa-lock"></i></div>
+      <div class="cert-info">
+        <h3>Introduction to CIP</h3>
+        <p>OPSWAT Academy</p>
+        <span class="cert-year cy-purple">2024</span>
+      </div>
+      <span class="cert-badge cb-purple">Verified ✓</span>
+    </div>
+
+    <div class="cert-card cc-pink">
+      <div class="cert-icon-wrap ciw-cert-pink"><i class="fas fa-flag"></i></div>
+      <div class="cert-info">
+        <h3>National Cybersecurity Hackathon</h3>
+        <p>AetherGrid Team</p>
+        <span class="cert-year cy-pink">2024</span>
+      </div>
+      <span class="cert-badge cb-pink">Achievement ✓</span>
+    </div>
+
+    <div class="cert-card cc-yellow">
+      <div class="cert-icon-wrap ciw-cert-yellow"><i class="fas fa-code"></i></div>
+      <div class="cert-info">
+        <h3>Alpha Course — DSA with Java</h3>
+        <p>Apna College</p>
+        <span class="cert-year cy-yellow">2023</span>
+      </div>
+      <span class="cert-badge cb-yellow">Verified ✓</span>
+    </div>
+
+    <div class="cert-card cc-cyan">
+      <div class="cert-icon-wrap ciw-cert-cyan"><i class="fas fa-user-secret"></i></div>
+      <div class="cert-info">
+        <h3>Cyber Basics: Hack Me If You Can</h3>
+        <p>DevTown</p>
+        <span class="cert-year cy-cyan">May 2025</span>
+      </div>
+      <span class="cert-badge cb-cyan">Verified ✓</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- EDUCATION -->
+<section class="section edu-section reveal" id="education">
+  <h2 class="section-title"><span class="st-bracket">[</span> EDUCATION <span class="st-bracket">]</span></h2>
+  <div class="edu-grid">
+
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front ff-cyan">
+          <div class="flip-icon fi-cyan"><i class="fas fa-graduation-cap"></i></div>
+          <h3>BE — Computer Science &amp; Engineering</h3>
+          <p class="flip-year">2022 – 2026</p>
+          <p class="flip-hint"><i class="fas fa-sync-alt"></i> Hover to flip</p>
+        </div>
+        <div class="flip-back fb-cyan">
+          <h3>BE — CSE</h3>
+          <p class="fb-inst"><i class="fas fa-university"></i> KLE College of Engineering &amp; Technology, Chikodi</p>
+          <p class="fb-grade"><i class="fas fa-star"></i> CGPA: 7.7 / 10</p>
+          <p class="fb-desc">Studying computer science with hands-on experience in Python full-stack development and cybersecurity. Active in hackathons, internships, and security research.</p>
+          <div class="fb-tags"><span class="fbt-cyan">Full Stack Dev</span><span class="fbt-cyan">Cybersecurity</span><span class="fbt-cyan">Python</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front ff-purple">
+          <div class="flip-icon fi-purple"><i class="fas fa-school"></i></div>
+          <h3>XII — PCMB</h3>
+          <p class="flip-year">2021</p>
+          <p class="flip-hint"><i class="fas fa-sync-alt"></i> Hover to flip</p>
+        </div>
+        <div class="flip-back fb-purple">
+          <h3>XII — PCMB</h3>
+          <p class="fb-inst"><i class="fas fa-university"></i> KLE Prerana PU College, Hubballi</p>
+          <p class="fb-grade"><i class="fas fa-star"></i> 77%</p>
+          <p class="fb-desc">Physics, Chemistry, Mathematics &amp; Biology. Developed early interest in computing and problem solving.</p>
+          <div class="fb-tags"><span class="fbt-purple">Physics</span><span class="fbt-purple">Chemistry</span><span class="fbt-purple">Mathematics</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front ff-pink">
+          <div class="flip-icon fi-pink"><i class="fas fa-book"></i></div>
+          <h3>X — Secondary School</h3>
+          <p class="flip-year">2019</p>
+          <p class="flip-hint"><i class="fas fa-sync-alt"></i> Hover to flip</p>
+        </div>
+        <div class="flip-back fb-pink">
+          <h3>X — Secondary School</h3>
+          <p class="fb-inst"><i class="fas fa-school"></i> Government High School, Shiragoan</p>
+          <p class="fb-grade"><i class="fas fa-trophy"></i> 90.40%</p>
+          <p class="fb-desc">Strong academic foundation with distinction. Developed discipline and analytical thinking from an early stage.</p>
+          <div class="fb-tags"><span class="fbt-pink">Distinction</span><span class="fbt-pink">90.40%</span><span class="fbt-pink">2019</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section exp-section reveal" id="experience">
+  <h2 class="section-title"><span class="st-bracket">[</span> EXPERIENCE <span class="st-bracket">]</span></h2>
+  <div class="exp-timeline">
+
+    <div class="exp-item exp-reveal">
+      <div class="exp-dot-col">
+        <div class="exp-pulse ep-cyan"></div>
+        <div class="exp-vline evl-cyan"></div>
+      </div>
+      <div class="exp-card ec-cyan">
+        <div class="exp-card-top">
+          <div>
+            <h3>Python Full Stack Developer Intern</h3>
+            <p class="exp-org"><i class="fas fa-building"></i> Dhee Coding Lab</p>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date"><i class="fas fa-calendar-alt"></i> Feb 2026 – Present</span>
+            <span class="exp-badge eb-cyan">Onsite</span>
+          </div>
+        </div>
+        <p class="exp-desc">Building and maintaining full-stack Python web applications. Working across backend APIs, database design, and frontend integration in a hands-on onsite environment.</p>
+        <div class="exp-tags">
+          <span class="etg-cyan">Python</span><span class="etg-cyan">FastAPI</span><span class="etg-cyan">React</span><span class="etg-cyan">PostgreSQL</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item exp-reveal">
+      <div class="exp-dot-col">
+        <div class="exp-pulse ep-purple"></div>
+        <div class="exp-vline evl-purple"></div>
+      </div>
+      <div class="exp-card ec-purple">
+        <div class="exp-card-top">
+          <div>
+            <h3>Cybersecurity &amp; Ethical Hacking Intern</h3>
+            <p class="exp-org"><i class="fas fa-shield-alt"></i> CampusPe</p>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date"><i class="fas fa-calendar-alt"></i> Feb 2026 – May 2026</span>
+            <span class="exp-badge eb-purple">Remote</span>
+          </div>
+        </div>
+        <p class="exp-desc">Conducted vulnerability assessments and ethical hacking exercises on test environments. Delivered security reports and contributed to awareness programs for student communities.</p>
+        <div class="exp-tags">
+          <span class="etg-purple">Nmap</span><span class="etg-purple">Kali Linux</span><span class="etg-purple">Wireshark</span><span class="etg-purple">Vulnerability Assessment</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item exp-reveal">
+      <div class="exp-dot-col">
+        <div class="exp-pulse ep-pink"></div>
+        <div class="exp-vline evl-pink"></div>
+      </div>
+      <div class="exp-card ec-pink">
+        <div class="exp-card-top">
+          <div>
+            <h3>Cyber Forensic Intern</h3>
+            <p class="exp-org"><i class="fas fa-search"></i> Cyber Privilege Pvt. Ltd.</p>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date"><i class="fas fa-calendar-alt"></i> Aug 2025 – Nov 2025</span>
+            <span class="exp-badge eb-pink">Remote</span>
+          </div>
+        </div>
+        <p class="exp-desc">Assisted in digital forensic investigations — analyzing disk images, recovering deleted artifacts, and preparing chain-of-custody documentation for real-world case support.</p>
+        <div class="exp-tags">
+          <span class="etg-pink">Digital Forensics</span><span class="etg-pink">Log Analysis</span><span class="etg-pink">Python</span><span class="etg-pink">Evidence Handling</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="section contact-section reveal" id="contact">
+  <h2 class="section-title"><span class="st-bracket">[</span> CONTACT <span class="st-bracket">]</span></h2>
+  <div class="contact-wrapper">
+    <div class="contact-info">
+      <h3>Let's <span class="hl-cyan">Connect</span></h3>
+      <p>Open to internships, collaborations, and cybersecurity discussions.</p>
+      <div class="contact-links">
+        <a href="mailto:shrinidhi@email.com" class="cl cl-cyan"><i class="fas fa-envelope"></i> shrinidhi@email.com</a>
+        <a href="https://github.com/ShrinidhiTotagi" target="_blank" class="cl cl-purple"><i class="fab fa-github"></i> github.com/ShrinidhiTotagi</a>
+        <a href="https://www.linkedin.com/in/shrinidhi-totagi" target="_blank" class="cl cl-blue"><i class="fab fa-linkedin"></i> linkedin.com/in/shrinidhi-totagi</a>
+      </div>
+    </div>
+    <form class="contact-form" onsubmit="sendMessage(event)">
+      <div class="form-group">
+        <input type="text" name="from_name" placeholder="Your Name" required>
+        <span class="form-icon"><i class="fas fa-user"></i></span>
+      </div>
+      <div class="form-group">
+        <input type="email" name="from_email" placeholder="Your Email" required>
+        <span class="form-icon"><i class="fas fa-envelope"></i></span>
+      </div>
+      <div class="form-group">
+        <textarea rows="5" name="message" placeholder="Your Message" required></textarea>
+        <span class="form-icon textarea-icon"><i class="fas fa-comment-dots"></i></span>
+      </div>
+      <button type="submit" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Send Message</button>
+    </form>
+  </div>
+</section>
+
+<!-- EXTRACURRICULAR -->
+<section class="section exp-section reveal" id="extracurricular">
+  <h2 class="section-title"><span class="st-bracket">[</span> EXTRACURRICULAR <span class="st-bracket">]</span></h2>
+  <div class="exp-timeline">
+
+    <div class="exp-item exp-reveal">
+      <div class="exp-dot-col">
+        <div class="exp-pulse ep-cyan"></div>
+        <div class="exp-vline evl-cyan"></div>
+      </div>
+      <div class="exp-card ec-cyan">
+        <div class="exp-card-top">
+          <div>
+            <h3>Club Coordinator</h3>
+            <p class="exp-org"><i class="fas fa-users"></i> Native Language Club — KLECET</p>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-badge eb-cyan">Leadership</span>
+          </div>
+        </div>
+        <p class="exp-desc">Organized and coordinated cultural and linguistic events to promote native language awareness among the student community at KLE College of Engineering &amp; Technology.</p>
+        <div class="exp-tags">
+          <span class="etg-cyan">Leadership</span><span class="etg-cyan">Event Management</span><span class="etg-cyan">Community</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item exp-reveal">
+      <div class="exp-dot-col">
+        <div class="exp-pulse ep-yellow"></div>
+        <div class="exp-vline evl-yellow"></div>
+      </div>
+      <div class="exp-card ec-yellow">
+        <div class="exp-card-top">
+          <div>
+            <h3>1st Prize — Poster Presentation</h3>
+            <p class="exp-org"><i class="fas fa-trophy"></i> Stutter Detection Research</p>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-badge eb-yellow">Achievement</span>
+          </div>
+        </div>
+        <p class="exp-desc">Won 1st prize in a poster presentation for the Deep Learning-Based Stutter Detection project, demonstrating research on audio classification and speech disorder detection.</p>
+        <div class="exp-tags">
+          <span class="etg-yellow">Research</span><span class="etg-yellow">Deep Learning</span><span class="etg-yellow">1st Prize</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item exp-reveal">
+      <div class="exp-dot-col">
+        <div class="exp-pulse ep-purple"></div>
+        <div class="exp-vline evl-purple"></div>
+      </div>
+      <div class="exp-card ec-purple">
+        <div class="exp-card-top">
+          <div>
+            <h3>Hackathon Team Leader</h3>
+            <p class="exp-org"><i class="fas fa-flag"></i> AetherGrid — National Cybersecurity Hackathon</p>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-badge eb-purple">Hackathon</span>
+          </div>
+        </div>
+        <p class="exp-desc">Led team AetherGrid at the National Cybersecurity Hackathon. Coordinated attack-defense strategy, delegated tasks across team members, and delivered a working security solution under competition pressure.</p>
+        <div class="exp-tags">
+          <span class="etg-purple">Team Leadership</span><span class="etg-purple">Cybersecurity</span><span class="etg-purple">Hackathon</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-socials">
+    <a href="https://github.com/ShrinidhiTotagi" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/shrinidhi-totagi" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:shrinidhi@email.com"><i class="fas fa-envelope"></i></a>
+  </div>
+  <p>Designed &amp; Built by <span class="hl-cyan">Shrinidhi Totagi</span> · 2025</p>
+  <p class="footer-sub">Building the web. Securing the stack. 🚀🔐</p>
+</footer>
+
+<!-- MODAL -->
+<div id="modal" class="modal hidden">
+  <div class="modal-box">
+    <span class="close" onclick="closeModal()"><i class="fas fa-times"></i></span>
+    <div class="modal-header">
+      <div class="modal-icon-wrap" id="modal-icon-wrap"><i id="modal-icon" class="fas fa-code"></i></div>
+      <h2 id="modal-title"></h2>
+    </div>
+    <p id="modal-desc"></p>
+    <div id="modal-details"></div>
+    <div class="modal-links">
+      <a id="modal-github" href="#" target="_blank" class="btn btn-outline"><i class="fab fa-github"></i> GitHub</a>
+      <a id="modal-live" href="#" target="_blank" class="btn btn-primary"><i class="fas fa-external-link-alt"></i> Live Demo</a>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="../js/bg.js"></script>
+<script src="../js/main.js"></script>
+<script src="../js/emailjs-enhanced.js"></script>
+<script src="../js/visitor-collector.js"></script>
+</body>
+</html>
