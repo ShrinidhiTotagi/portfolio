@@ -1,6 +1,6 @@
 const EMAILJS_PUBLIC_KEY     = "NGKnje_lZctQhVGMs";
 const EMAILJS_SERVICE_ID     = "service_9n4j8vb";
-const CONTACT_TEMPLATE_ID    = "YOUR_CONTACT_TEMPLATE_ID";
+const CONTACT_TEMPLATE_ID    = "template_e0nit97";
 const VISITOR_TEMPLATE_ID    = "template_g7bussp";
 
 emailjs.init(EMAILJS_PUBLIC_KEY);
@@ -50,6 +50,7 @@ function sendMessage(e) {
   btn.textContent = "TRANSMITTING…";
 
   const params = {
+    title:          `Message from ${name}`,
     visitor_name:   sessionStorage.getItem("visitorName") || "Unknown",
     from_name:      name,
     from_email:     email,

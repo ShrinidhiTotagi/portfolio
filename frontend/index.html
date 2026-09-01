@@ -1,0 +1,1771 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shrinidhi Totagi | Python Full Stack Developer & Cybersecurity Engineer</title>
+  <meta name="description" content="Shrinidhi Totagi — BE CSE Graduate, Python Full Stack Developer and Cybersecurity Engineer. Building secure full-stack applications with FastAPI, React, PostgreSQL.">
+  <meta name="keywords" content="Shrinidhi Totagi, Python Developer, Full Stack Developer, Cybersecurity, FastAPI, React, Portfolio">
+  <meta name="author" content="Shrinidhi Totagi">
+  <meta property="og:title" content="Shrinidhi Totagi | Python Full Stack Developer">
+  <meta property="og:description" content="BE CSE Graduate building secure full-stack Python applications and cybersecurity tools.">
+  <meta property="og:image" content="img/image.png">
+  <meta property="og:url" content="https://shrinidhi-totagi.netlify.app">
+  <meta property="og:type" content="website">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Shrinidhi Totagi | Python Full Stack Developer">
+  <meta name="twitter:description" content="BE CSE Graduate building secure full-stack Python applications and cybersecurity tools.">
+  <meta name="twitter:image" content="img/image.png">
+  <link rel="canonical" href="https://shrinidhi-totagi.netlify.app">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Orbitron:wght@400;700;900&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- SPLASH SCREEN -->
+<div id="splashScreen" style="display:none;position:fixed;inset:0;z-index:10000;background:#050505;align-items:center;justify-content:center;flex-direction:column;gap:24px;transition:opacity 0.5s;">
+  <div class="splash-inner">
+    <div class="splash-logo">&lt;<span style="color:#00ffc3">SHRINIDHI</span> /&gt;</div>
+    <p class="splash-sub">// Initializing secure connection…</p>
+    <div class="splash-form">
+      <input id="visitorName" type="text" placeholder="Enter your full name…" autocomplete="off">
+      <button id="enterSite"><i class="fas fa-terminal"></i> Enter</button>
+    </div>
+    <p class="splash-note">Your visit info is collected for analytics purposes.</p>
+  </div>
+</div>
+
+<!-- CANVAS BACKGROUND -->
+<canvas id="bg3d"></canvas>
+
+<!-- LOADING SCREEN -->
+<div id="loader">
+  <div class="loader-inner">
+    <div class="loader-ring"></div>
+    <div class="loader-text">INITIALIZING<span class="loader-dots"></span></div>
+    <div class="loader-bar-wrap"><div class="loader-bar" id="loaderBar"></div></div>
+    <div class="loader-percent" id="loaderPercent">0%</div>
+  </div>
+</div>
+
+<!-- NAVBAR -->
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">&lt;<span class="logo-name">SHRINIDHI</span> /&gt;</div>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#home">Home</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#skills">Skills</a></li>
+    <li><a href="#projects">Projects</a></li>
+    <li><a href="#certifications">Certs</a></li>
+    <li><a href="#education">Education</a></li>
+    <li><a href="#experience">Experience</a></li>
+    <li><a href="#extracurricular">Extra</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <div class="hamburger" id="hamburger"><i class="fas fa-bars"></i></div>
+</nav>
+
+<!-- DIGITAL IDENTITY CARD HEADER -->
+<section class="identity-section" id="home">
+  <div class="identity-card">
+    <!-- HUD Corners -->
+    <div class="corner corner-tl"></div>
+    <div class="corner corner-tr"></div>
+    <div class="corner corner-bl"></div>
+    <div class="corner corner-br"></div>
+    
+    <!-- Blink dots -->
+    <div class="hud-dot" style="top: 18px; left: 50%; animation-delay: 0s;"></div>
+    <div class="hud-dot" style="bottom: 18px; right: 50%; animation-delay: 0.7s;"></div>
+    <div class="hud-dot" style="top: 50%; right: 18px; animation-delay: 1.4s;"></div>
+    
+    <!-- Circuit decorations -->
+    <div class="circuit" style="bottom: 0; left: 0; width: 200px; height: 120px;">
+      <svg viewBox="0 0 200 120">
+        <polyline points="10,110 10,60 60,60 60,30 120,30" fill="none" stroke="#00e5ff" stroke-width="1"/>
+        <circle cx="60" cy="60" r="3" fill="#00e5ff"/>
+        <circle cx="120" cy="30" r="3" fill="#00e5ff"/>
+        <polyline points="0,90 40,90 40,70 80,70" fill="none" stroke="#00e5ff" stroke-width="0.5"/>
+      </svg>
+    </div>
+    <div class="circuit" style="top: 0; right: 0; width: 160px; height: 100px;">
+      <svg viewBox="0 0 160 100">
+        <polyline points="160,10 110,10 110,50 70,50 70,90" fill="none" stroke="#00e5ff" stroke-width="1"/>
+        <circle cx="110" cy="50" r="3" fill="#00e5ff"/>
+        <circle cx="70" cy="90" r="3" fill="#00e5ff"/>
+      </svg>
+    </div>
+    
+    <!-- Main Content Grid -->
+    <div class="identity-main-content">
+      <!-- LEFT: Profile Column -->
+      <div class="identity-profile-column">
+        <div class="dic-id-label">// IDENTITY NODE</div>
+        <div class="dic-profile-wrap">
+          <div class="dic-ring-outer"></div>
+          <div class="dic-ring-mid"></div>
+          <div class="dic-ring-inner"></div>
+          <div class="dic-radar"></div>
+          <div class="dic-crosshair"></div>
+          <div class="dic-scan-line"></div>
+          <img src="img/image.png" alt="Shrinidhi" class="dic-photo">
+        </div>
+        <div class="dic-beam"></div>
+        <div class="dic-platform"></div>
+        <div class="dic-status">
+          <span class="dic-status-dot"></span>
+          <span class="dic-status-txt">ONLINE</span>
+        </div>
+        <div class="dic-id-num">ID :: SHR-2026-CSE</div>
+      </div>
+      
+      <!-- RIGHT: Content Column -->
+      <div class="identity-content-column">
+        <div class="dic-card-label">// DIGITAL IDENTITY CARD</div>
+        <div class="dic-name">SHRINIDHI TOTAGI</div>
+        <div class="dic-role">PYTHON DEVELOPER &amp; CYBERSECURITY ENTHUSIAST</div>
+        <div class="dic-divider"></div>
+        <!-- <div class="dic-about-label">// ABOUT ME</div>
+        <div class="dic-about-txt">I build secure digital solutions focused on Cybersecurity, Digital Forensics, Python Development and secure software engineering.</div> -->
+        <div class="dic-info-grid">
+          <div class="dic-info-row">
+            <span class="dic-info-icon">◈</span>
+            <div>
+              <span class="dic-info-lbl">LOCATION</span>
+              <span class="dic-info-val">India</span>
+            </div>
+          </div>
+          <div class="dic-info-row">
+            <span class="dic-info-icon">◈</span>
+            <div>
+              <span class="dic-info-lbl">EDUCATION</span>
+              <span class="dic-info-val">BE Computer Science Engg.</span>
+            </div>
+          </div>
+          <div class="dic-info-row">
+            <span class="dic-info-icon">◈</span>
+            <div>
+              <span class="dic-info-lbl">SPECIALIZATION</span>
+              <span class="dic-info-val">Python Development & Cybersecurity</span>
+            </div>
+          </div>
+          <div class="dic-info-row dic-info-full">
+            <span class="dic-info-icon">◈</span>
+            <div>
+              <span class="dic-info-lbl">FOCUS AREAS</span>
+              <div class="dic-focus-pills">
+                <span>Python</span>
+                <span>Django</span>
+                <span>REST API</span>
+                <span>Digital Forensics</span>
+                <span>Networking</span>
+                <span>Linux</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Action Area Divider -->
+      <div class="action-area-divider"></div>
+
+      <!-- Action Area Container -->
+      <div class="action-area-container">
+        <!-- Social Links Row -->
+        <div class="social-links-row">
+          <a href="https://github.com/ShrinidhiTotagi" target="_blank" class="dic-action-social dic-action-github">
+            <i class="fab fa-github"></i>
+            <span>GitHub</span>
+          </a>
+          <a href="https://www.linkedin.com/in/shrinidhi-totagi" target="_blank" class="dic-action-social dic-action-linkedin">
+            <i class="fab fa-linkedin"></i>
+            <span>LinkedIn</span>
+          </a>
+          <a href="https://leetcode.com/u/8ALH2gh0WV/" target="_blank" class="dic-action-social dic-action-leetcode">
+            <i class="fas fa-code"></i>
+            <span>LeetCode</span>
+          </a>
+        </div>
+
+        <!-- Download Buttons Row -->
+        <div class="download-buttons-row">
+          <a href="img/Resume.pdf" class="dic-action-download dic-download-cv" download>
+            <i class="fas fa-download"></i>
+            <span>DOWNLOAD CV</span>
+          </a>
+          <a href="img/cover%20letter.pdf" class="dic-action-download dic-download-cover" download>
+            <i class="fas fa-download"></i>
+            <span>DOWNLOAD COVER LETTER</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bottom Status Area -->
+      <div class="dic-bottom">
+        <div class="dic-bot-status">
+          <span class="dic-status-dot"></span>
+          <div>
+            <div class="dic-bot-lbl">STATUS</div>
+            <div class="dic-bot-val">ONLINE</div>
+          </div>
+        </div>
+        <div class="dic-sec-block">
+          <div class="dic-sec-label">SECURITY LEVEL <span>90%</span></div>
+          <div class="dic-progress-track">
+            <div class="dic-progress-fill"></div>
+          </div>
+          <div class="dic-sec-sub">// SYSTEM SECURE</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<div class="stats-bar reveal" id="statsBar">
+  <div class="stat-item"><span class="stat-icon"><i class="fas fa-code-branch"></i></span><h3 class="counter" data-target="6">0</h3><p>Projects</p></div>
+  <div class="stat-item"><span class="stat-icon"><i class="fas fa-certificate"></i></span><h3 class="counter" data-target="5">0</h3><p>Certifications</p></div>
+  <div class="stat-item"><span class="stat-icon"><i class="fas fa-briefcase"></i></span><h3 class="counter" data-target="3">0</h3><p>Internships</p></div>
+  <div class="stat-item"><span class="stat-icon"><i class="fas fa-clock"></i></span><h3 class="counter" data-target="500">0</h3><p>Hours Learning</p></div>
+</div>
+
+<!-- ABOUT -->
+<section class="section about-section reveal" id="about">
+  <div class="about-container">
+    <!-- Header with decorative elements -->
+    <div class="about-header">
+      <div class="about-eyebrow">
+        <span class="about-line"></span>
+        <span>// CORE IDENTITY</span>
+        <span class="about-line"></span>
+      </div>
+      <h2 class="about-title">ABOUT <span class="about-title-accent">ME</span></h2>
+      <div class="about-title-rule">
+        <span></span>
+        <span class="about-diamond">◆</span>
+        <span></span>
+      </div>
+    </div>
+    
+    <!-- Main content grid -->
+    <div class="about-content-grid">
+      <!-- Left column - Visual element -->
+      <div class="about-visual">
+        <div class="about-hologram">
+          <div class="hologram-ring hologram-ring-outer"></div>
+          <div class="hologram-ring hologram-ring-mid"></div>
+          <div class="hologram-ring hologram-ring-inner"></div>
+          <div class="hologram-core">
+            <i class="fas fa-user-secret"></i>
+          </div>
+          <div class="hologram-particle" style="top: 20%; left: 20%;"></div>
+          <div class="hologram-particle" style="top: 40%; right: 15%;"></div>
+          <div class="hologram-particle" style="bottom: 30%; left: 30%;"></div>
+        </div>
+        <div class="about-visual-label">
+          <span class="visual-label-dot"></span>
+          <span class="visual-label-text">DIGITAL IDENTITY ACTIVE</span>
+        </div>
+      </div>
+      
+      <!-- Right column - Text content -->
+      <div class="about-text-content">
+        <div class="about-intro">
+          <h3 class="about-intro-title">CYBERSECURITY ENGINEER &amp; FULL-STACK DEVELOPER</h3>
+          <p class="about-intro-subtitle">Building secure digital infrastructure for the modern web</p>
+        </div>
+        
+        <div class="about-description">
+          <p class="about-main-description">
+            <span class="highlight-cyan">Cybersecurity Engineer</span> & <span class="highlight-green">Full-Stack Developer</span> building secure, scalable digital infrastructure. 
+            Expert in <span class="highlight-purple">Python</span>, <span class="highlight-amber">Digital Forensics</span>, and <span class="highlight-blue">Secure Architecture</span>.
+          </p>
+          
+          <div class="about-highlights">
+            <div class="highlight-item">
+              <span class="highlight-bullet">◆</span>
+              <span>Security-first approach to software development</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-bullet">◆</span>
+              <span>Full-stack expertise with Python & modern web technologies</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-bullet">◆</span>
+              <span>Proactive threat analysis & vulnerability assessment</span>
+            </div>
+            <div class="highlight-item">
+              <span class="highlight-bullet">◆</span>
+              <span>Clean, maintainable code with security built-in</span>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Key focus areas - Horizontal layout -->
+        <div class="about-focus-areas">
+          <div class="focus-areas-grid">
+            <div class="focus-area">
+              <div class="focus-icon">
+                <i class="fas fa-shield-alt"></i>
+              </div>
+              <div class="focus-content">
+                <h4>Security First</h4>
+                <p>Security at every layer, from infrastructure to application code.</p>
+              </div>
+            </div>
+            
+            <div class="focus-area">
+              <div class="focus-icon">
+                <i class="fas fa-code"></i>
+              </div>
+              <div class="focus-content">
+                <h4>Clean Code</h4>
+                <p>Maintainable Python & JavaScript that scales with business needs.</p>
+              </div>
+            </div>
+            
+            <div class="focus-area">
+              <div class="focus-icon">
+                <i class="fas fa-search"></i>
+              </div>
+              <div class="focus-content">
+                <h4>Threat Intel</h4>
+                <p>Proactive monitoring & analysis to prevent breaches before they happen.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Current mission -->
+        <div class="about-mission">
+          <div class="mission-label">// CURRENT MISSION</div>
+          <p class="mission-text">Developing enterprise-grade security tools while contributing to open-source cybersecurity projects that make the digital world safer for everyone.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section class="section skv2-section reveal" id="skills">
+  <div class="npc-eyebrow"><span class="npc-line"></span><span>// CAPABILITIES</span><span class="npc-line"></span></div>
+  <h2 class="section-title"><span class="st-bracket"></span> SKILLS <span class="st-bracket"></span></h2>
+  <div class="npc-title-rule"><span></span><span class="npc-diamond">◆</span><span></span></div>
+  <div class="skv2-grid">
+
+    <div class="skv2-card" style="--skv2-accent:#00ffe5">
+      <div class="skv2-card-head">
+        <span class="skv2-icon" style="background:rgba(0,255,229,0.1);color:#00ffe5"><i class="fas fa-code"></i></span>
+        <h3>Programming</h3>
+      </div>
+      <div class="skv2-pills">
+        <span class="skv2-pill">Python</span>
+        <span class="skv2-pill">JavaScript</span>
+        <span class="skv2-pill">SQL</span>
+        <span class="skv2-pill">Bash</span>
+        <span class="skv2-pill">HTML / CSS</span>
+        <span class="skv2-pill">Java</span>
+      </div>
+    </div>
+
+    <div class="skv2-card" style="--skv2-accent:#cc44ff">
+      <div class="skv2-card-head">
+        <span class="skv2-icon" style="background:rgba(204,68,255,0.1);color:#cc44ff"><i class="fas fa-sitemap"></i></span>
+        <h3>DSA &amp; Problem Solving</h3>
+      </div>
+      <div class="skv2-pills">
+        <span class="skv2-pill">Arrays &amp; Strings</span>
+        <span class="skv2-pill">Linked Lists</span>
+        <span class="skv2-pill">Trees &amp; Graphs</span>
+        <span class="skv2-pill">Dynamic Programming</span>
+        <span class="skv2-pill">Sorting &amp; Searching</span>
+        <span class="skv2-pill">Recursion</span>
+      </div>
+    </div>
+
+    <div class="skv2-card" style="--skv2-accent:#00cfff">
+      <div class="skv2-card-head">
+        <span class="skv2-icon" style="background:rgba(0,207,255,0.1);color:#00cfff"><i class="fas fa-layer-group"></i></span>
+        <h3>Frontend</h3>
+      </div>
+      <div class="skv2-pills">
+        <span class="skv2-pill">React</span>
+        <span class="skv2-pill">HTML5</span>
+        <span class="skv2-pill">CSS3</span>
+        <span class="skv2-pill">JavaScript ES6+</span>
+        <span class="skv2-pill">Responsive Design</span>
+        <span class="skv2-pill">REST API Integration</span>
+      </div>
+    </div>
+
+    <div class="skv2-card" style="--skv2-accent:#ffe600">
+      <div class="skv2-card-head">
+        <span class="skv2-icon" style="background:rgba(255,230,0,0.1);color:#ffe600"><i class="fas fa-server"></i></span>
+        <h3>Backend</h3>
+      </div>
+      <div class="skv2-pills">
+        <span class="skv2-pill">FastAPI</span>
+        <span class="skv2-pill">Django</span>
+        <span class="skv2-pill">Flask</span>
+        <span class="skv2-pill">PostgreSQL</span>
+        <span class="skv2-pill">MySQL</span>
+        <span class="skv2-pill">Oracle SQL</span>
+        <span class="skv2-pill">REST APIs</span>
+        <span class="skv2-pill">Docker</span>
+      </div>
+    </div>
+
+    <div class="skv2-card" style="--skv2-accent:#ff2d55">
+      <div class="skv2-card-head">
+        <span class="skv2-icon" style="background:rgba(255,45,85,0.1);color:#ff2d55"><i class="fas fa-shield-alt"></i></span>
+        <h3>Cybersecurity</h3>
+      </div>
+      <div class="skv2-pills">
+        <span class="skv2-pill">Vulnerability Assessment</span>
+        <span class="skv2-pill">Ethical Hacking</span>
+        <span class="skv2-pill">Nmap</span>
+        <span class="skv2-pill">Wireshark</span>
+        <span class="skv2-pill">Kali Linux</span>
+        <span class="skv2-pill">Honeypots</span>
+        <span class="skv2-pill">IDS / IPS</span>
+        <span class="skv2-pill">OSINT</span>
+      </div>
+    </div>
+
+    <div class="skv2-card" style="--skv2-accent:#ff6a00">
+      <div class="skv2-card-head">
+        <span class="skv2-icon" style="background:rgba(255,106,0,0.1);color:#ff6a00"><i class="fas fa-search"></i></span>
+        <h3>Digital Forensics</h3>
+      </div>
+      <div class="skv2-pills">
+        <span class="skv2-pill">Disk Imaging</span>
+        <span class="skv2-pill">Log Analysis</span>
+        <span class="skv2-pill">Evidence Handling</span>
+        <span class="skv2-pill">Chain of Custody</span>
+        <span class="skv2-pill">Artifact Recovery</span>
+        <span class="skv2-pill">SHA-256 Hashing</span>
+      </div>
+    </div>
+
+    <div class="skv2-card" style="--skv2-accent:#00ff88">
+      <div class="skv2-card-head">
+        <span class="skv2-icon" style="background:rgba(0,255,136,0.1);color:#00ff88"><i class="fas fa-network-wired"></i></span>
+        <h3>Networking</h3>
+      </div>
+      <div class="skv2-pills">
+        <span class="skv2-pill">TCP/IP</span>
+        <span class="skv2-pill">DNS / HTTP</span>
+        <span class="skv2-pill">Subnetting</span>
+        <span class="skv2-pill">Packet Analysis</span>
+        <span class="skv2-pill">Firewall Rules</span>
+        <span class="skv2-pill">VPN</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section class="section npc-section reveal" id="projects">
+
+  <div class="npc-header">
+    <div class="npc-eyebrow"><span class="npc-line"></span><span>// PORTFOLIO</span><span class="npc-line"></span></div>
+    <h2 class="npc-title"><span class="npc-icon-emoji">🧪</span> PROJECTS</h2>
+    <p class="npc-subtitle">Security systems, AI platforms and full-stack tools — built from scratch.</p>
+    <div class="npc-title-rule"><span></span><span class="npc-diamond">◆</span><span></span></div>
+  </div>
+
+  <div class="npc-filter-bar">
+    <button class="npc-filter active" data-filter="all">All</button>
+    <button class="npc-filter" data-filter="security">Security</button>
+    <button class="npc-filter" data-filter="ai">AI / ML</button>
+    <button class="npc-filter" data-filter="fullstack">Full Stack</button>
+    <button class="npc-filter" data-filter="crypto">Cryptography</button>
+  </div>
+
+  <div class="npc-grid" id="npcGrid">
+
+    <!-- Card 1 — Green -->
+    <article class="npc-card npc-green" data-tags="security fullstack">
+      <div class="npc-shine"></div>
+      <div class="npc-glow-orb"></div>
+      <div class="npc-card-inner">
+        <div class="npc-card-top">
+          <span class="npc-badge nbg-green"><i class="fas fa-shield-halved"></i> Security</span>
+          <span class="npc-live-dot"><span class="npc-dot"></span>Active</span>
+        </div>
+        <div class="npc-icon-wrap niw-green"><i class="fas fa-spider-web"></i></div>
+        <h3 class="npc-card-title">AI-Powered Deception Grid</h3>
+        <p class="npc-card-desc">Enterprise deception platform using Cowrie Honeypot, Suricata IDS, Elastic Stack and automated threat analysis to detect and profile attackers in real time.</p>
+        <div class="npc-pills">
+          <span class="npc-pill npp-green">Python</span>
+          <span class="npc-pill npp-green">Cowrie</span>
+          <span class="npc-pill npp-green">Suricata</span>
+          <span class="npc-pill npp-green">ELK Stack</span>
+          <span class="npc-pill npp-green">Linux</span>
+        </div>
+        <div class="npc-card-footer">
+          <a href="https://github.com/ShrinidhiTotagi" target="_blank" class="npc-btn npc-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+          <button class="npc-btn npc-btn-ghost npc-btn-dim" disabled><i class="fas fa-satellite-dish"></i> Live</button>
+          <button class="npc-btn npc-btn-accent nbtn-green" onclick="openProjModal('deceptiongrid')"><i class="fas fa-expand-alt"></i> Details</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 2 — Cyan -->
+    <article class="npc-card npc-cyan" data-tags="security fullstack">
+      <div class="npc-shine"></div>
+      <div class="npc-glow-orb"></div>
+      <div class="npc-card-inner">
+        <div class="npc-card-top">
+          <span class="npc-badge nbg-cyan"><i class="fas fa-user-shield"></i> Insider Threat</span>
+          <span class="npc-live-dot"><span class="npc-dot"></span>Active</span>
+        </div>
+        <div class="npc-icon-wrap niw-cyan"><i class="fas fa-eye"></i></div>
+        <h3 class="npc-card-title">Human Risk Monitoring System</h3>
+        <p class="npc-card-desc">Web platform for monitoring insider threats, employee security awareness and behavioural risk scoring with an interactive analytics dashboard.</p>
+        <div class="npc-pills">
+          <span class="npc-pill npp-cyan">Django</span>
+          <span class="npc-pill npp-cyan">Python</span>
+          <span class="npc-pill npp-cyan">JavaScript</span>
+          <span class="npc-pill npp-cyan">Oracle SQL</span>
+        </div>
+        <div class="npc-card-footer">
+          <a href="https://github.com/ShrinidhiTotagi/human-error" target="_blank" class="npc-btn npc-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+          <button class="npc-btn npc-btn-ghost npc-btn-dim" disabled><i class="fas fa-satellite-dish"></i> Live</button>
+          <button class="npc-btn npc-btn-accent nbtn-cyan" onclick="openProjModal('humanrisk')"><i class="fas fa-expand-alt"></i> Details</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 3 — Purple -->
+    <article class="npc-card npc-purple" data-tags="security fullstack">
+      <div class="npc-shine"></div>
+      <div class="npc-glow-orb"></div>
+      <div class="npc-card-inner">
+        <div class="npc-card-top">
+          <span class="npc-badge nbg-purple"><i class="fas fa-globe-americas"></i> OSINT</span>
+          <span class="npc-live-dot"><span class="npc-dot"></span>Active</span>
+        </div>
+        <div class="npc-icon-wrap niw-purple"><i class="fas fa-mask"></i></div>
+        <h3 class="npc-card-title">Dark Web Threat Dashboard</h3>
+        <p class="npc-card-desc">Dashboard that aggregates dark web intelligence, leaked credentials and live cyber threat feeds into a unified threat visibility platform.</p>
+        <div class="npc-pills">
+          <span class="npc-pill npp-purple">Python</span>
+          <span class="npc-pill npp-purple">Threat Intel</span>
+          <span class="npc-pill npp-purple">REST API</span>
+          <span class="npc-pill npp-purple">Dashboard</span>
+        </div>
+        <div class="npc-card-footer">
+          <a href="https://github.com/ShrinidhiTotagi/darkweb" target="_blank" class="npc-btn npc-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+          <button class="npc-btn npc-btn-ghost npc-btn-dim" disabled><i class="fas fa-satellite-dish"></i> Live</button>
+          <button class="npc-btn npc-btn-accent nbtn-purple" onclick="openProjModal('darkweb')"><i class="fas fa-expand-alt"></i> Details</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 4 — Amber -->
+    <article class="npc-card npc-amber" data-tags="security fullstack">
+      <div class="npc-shine"></div>
+      <div class="npc-glow-orb"></div>
+      <div class="npc-card-inner">
+        <div class="npc-card-top">
+          <span class="npc-badge nbg-amber"><i class="fas fa-triangle-exclamation"></i> Risk</span>
+          <span class="npc-live-dot"><span class="npc-dot"></span>Active</span>
+        </div>
+        <div class="npc-icon-wrap niw-amber"><i class="fas fa-chart-line"></i></div>
+        <h3 class="npc-card-title">Operational Risk Event Collector</h3>
+        <p class="npc-card-desc">Security incident collection and analysis platform with structured reporting, event categorisation and a live analytics dashboard.</p>
+        <div class="npc-pills">
+          <span class="npc-pill npp-amber">Python</span>
+          <span class="npc-pill npp-amber">Django</span>
+          <span class="npc-pill npp-amber">Oracle SQL</span>
+        </div>
+        <div class="npc-card-footer">
+          <a href="https://github.com/ShrinidhiTotagi/oprational" target="_blank" class="npc-btn npc-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+          <button class="npc-btn npc-btn-ghost npc-btn-dim" disabled><i class="fas fa-satellite-dish"></i> Live</button>
+          <button class="npc-btn npc-btn-accent nbtn-amber" onclick="openProjModal('riskevent')"><i class="fas fa-expand-alt"></i> Details</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 5 — Blue -->
+    <article class="npc-card npc-blue" data-tags="crypto security">
+      <div class="npc-shine"></div>
+      <div class="npc-glow-orb"></div>
+      <div class="npc-card-inner">
+        <div class="npc-card-top">
+          <span class="npc-badge nbg-blue"><i class="fas fa-atom"></i> Post-Quantum</span>
+          <span class="npc-live-dot"><span class="npc-dot"></span>Active</span>
+        </div>
+        <div class="npc-icon-wrap niw-blue"><i class="fas fa-lock"></i></div>
+        <h3 class="npc-card-title">Post-Quantum Secure Communication</h3>
+        <p class="npc-card-desc">Secure communication system implementing post-quantum cryptography — Kyber key encapsulation and Dilithium signatures — for future-safe messaging.</p>
+        <div class="npc-pills">
+          <span class="npc-pill npp-blue">Python</span>
+          <span class="npc-pill npp-blue">Cryptography</span>
+          <span class="npc-pill npp-blue">Kyber</span>
+          <span class="npc-pill npp-blue">Dilithium</span>
+        </div>
+        <div class="npc-card-footer">
+          <a href="https://github.com/ShrinidhiTotagi/post-quantum-secure-communication" target="_blank" class="npc-btn npc-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+          <button class="npc-btn npc-btn-ghost npc-btn-dim" disabled><i class="fas fa-satellite-dish"></i> Live</button>
+          <button class="npc-btn npc-btn-accent nbtn-blue" onclick="openProjModal('postquantum')"><i class="fas fa-expand-alt"></i> Details</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- Card 6 — Red -->
+    <article class="npc-card npc-red" data-tags="ai fullstack">
+      <div class="npc-shine"></div>
+      <div class="npc-glow-orb"></div>
+      <div class="npc-card-inner">
+        <div class="npc-card-top">
+          <span class="npc-badge nbg-red"><i class="fas fa-brain"></i> AI / ML</span>
+          <span class="npc-live-dot"><span class="npc-dot"></span>Active</span>
+        </div>
+        <div class="npc-icon-wrap niw-red"><i class="fas fa-microphone-lines"></i></div>
+        <h3 class="npc-card-title">Speech AI Platform</h3>
+        <p class="npc-card-desc">Deep learning stutter detection using Wav2Vec2, Librosa and Transformer models — classifying repetition, prolongation and blocking patterns with 89% accuracy.</p>
+        <div class="npc-pills">
+          <span class="npc-pill npp-red">Python</span>
+          <span class="npc-pill npp-red">PyTorch</span>
+          <span class="npc-pill npp-red">Transformers</span>
+          <span class="npc-pill npp-red">React</span>
+          <span class="npc-pill npp-red">Flask</span>
+        </div>
+        <div class="npc-card-footer">
+          <a href="https://github.com/ShrinidhiTotagi/stutter" target="_blank" class="npc-btn npc-btn-ghost"><i class="fab fa-github"></i> GitHub</a>
+          <button class="npc-btn npc-btn-ghost npc-btn-dim" disabled><i class="fas fa-satellite-dish"></i> Live</button>
+          <button class="npc-btn npc-btn-accent nbtn-red" onclick="openProjModal('stutter')"><i class="fas fa-expand-alt"></i> Details</button>
+        </div>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- CERTIFICATIONS -->
+<section class="cgx-section reveal" id="certifications">
+
+  <!-- ambient bg -->
+  <div class="cgx-bg-grid"></div>
+  <div class="cgx-orb cgx-orb-a"></div>
+  <div class="cgx-orb cgx-orb-b"></div>
+
+  <div class="cgx-wrap">
+
+    <!-- LEFT: heading + description + CTA -->
+    <div class="cgx-left">
+      <div class="cgx-eyebrow"><span class="cgx-eline"></span><span>// VERIFIED CREDENTIALS</span><span class="cgx-eline cgx-eline-r"></span></div>
+      <h2 class="cgx-heading">Professional<br><span class="cgx-heading-accent">Certifications</span><br>&amp; Achievements</h2>
+      <p class="cgx-desc">These credentials represent continuous learning across cybersecurity, digital forensics, software development and networking — earned through rigorous coursework, hands-on labs and real-world competitions.</p>
+      <div class="cgx-stats">
+        <div class="cgx-stat"><span class="cgx-stat-n">13</span><span class="cgx-stat-l">Credentials</span></div>
+        <div class="cgx-stat-div"></div>
+        <div class="cgx-stat"><span class="cgx-stat-n">5+</span><span class="cgx-stat-l">Domains</span></div>
+        <div class="cgx-stat-div"></div>
+        <div class="cgx-stat"><span class="cgx-stat-n">2023–25</span><span class="cgx-stat-l">Active</span></div>
+      </div>
+      <button onclick="vaultOpen()" class="cgx-cta" style="cursor:pointer;background:none;">
+        <span class="cgx-cta-shine"></span>
+        <i class="fas fa-vault"></i> View All Certifications
+      </button>
+    </div>
+
+    <!-- RIGHT: expanding gallery -->
+    <div class="cgx-gallery" id="cgxGallery">
+
+      <div class="cgx-card cgx-active" data-idx="0"
+           style="--cc:#00ff88;--cs:0,255,136">
+        <div class="cgx-card-shine"></div>
+        <div class="cgx-collapsed">
+          <span class="cgx-vtitle">HP Cybersecurity</span>
+          <span class="cgx-vnum">01</span>
+        </div>
+        <div class="cgx-expanded">
+          <div class="cgx-cert-icon"><i class="fas fa-shield-alt"></i></div>
+          <div class="cgx-cert-badge">Verified ✓</div>
+          <h3 class="cgx-cert-title">HP Cybersecurity Foundations</h3>
+          <p class="cgx-cert-issuer"><i class="fas fa-building"></i> HP Inc.</p>
+          <p class="cgx-cert-date"><i class="fas fa-calendar-alt"></i> 2024</p>
+          <div class="cgx-cert-tags">
+            <span>Network Security</span><span>Threat Analysis</span><span>Foundations</span>
+          </div>
+          <div class="cgx-cert-btns">
+            <a href="#" class="cgx-btn cgx-btn-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+            <a href="#" class="cgx-btn cgx-btn-dl"><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cgx-card" data-idx="1"
+           style="--cc:#00e5ff;--cs:0,229,255">
+        <div class="cgx-card-shine"></div>
+        <div class="cgx-collapsed">
+          <span class="cgx-vtitle">OPSWAT CIP</span>
+          <span class="cgx-vnum">02</span>
+        </div>
+        <div class="cgx-expanded">
+          <div class="cgx-cert-icon"><i class="fas fa-industry"></i></div>
+          <div class="cgx-cert-badge">Verified ✓</div>
+          <h3 class="cgx-cert-title">Introduction to CIP</h3>
+          <p class="cgx-cert-issuer"><i class="fas fa-building"></i> OPSWAT Academy</p>
+          <p class="cgx-cert-date"><i class="fas fa-calendar-alt"></i> 2024</p>
+          <div class="cgx-cert-tags">
+            <span>Critical Infrastructure</span><span>ICS Security</span><span>OT/IT</span>
+          </div>
+          <div class="cgx-cert-btns">
+            <a href="#" class="cgx-btn cgx-btn-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+            <a href="#" class="cgx-btn cgx-btn-dl"><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cgx-card" data-idx="2"
+           style="--cc:#8b5cf6;--cs:139,92,246">
+        <div class="cgx-card-shine"></div>
+        <div class="cgx-collapsed">
+          <span class="cgx-vtitle">Google Cyber</span>
+          <span class="cgx-vnum">03</span>
+        </div>
+        <div class="cgx-expanded">
+          <div class="cgx-cert-icon"><i class="fab fa-google"></i></div>
+          <div class="cgx-cert-badge">Verified ✓</div>
+          <h3 class="cgx-cert-title">Google Cybersecurity Certificate</h3>
+          <p class="cgx-cert-issuer"><i class="fas fa-building"></i> Google / Coursera</p>
+          <p class="cgx-cert-date"><i class="fas fa-calendar-alt"></i> 2024</p>
+          <div class="cgx-cert-tags">
+            <span>SIEM</span><span>Python</span><span>Linux</span><span>SQL</span>
+          </div>
+          <div class="cgx-cert-btns">
+            <a href="#" class="cgx-btn cgx-btn-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+            <a href="#" class="cgx-btn cgx-btn-dl"><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cgx-card" data-idx="3"
+           style="--cc:#ffb300;--cs:255,179,0">
+        <div class="cgx-card-shine"></div>
+        <div class="cgx-collapsed">
+          <span class="cgx-vtitle">Oracle SQL</span>
+          <span class="cgx-vnum">04</span>
+        </div>
+        <div class="cgx-expanded">
+          <div class="cgx-cert-icon"><i class="fas fa-database"></i></div>
+          <div class="cgx-cert-badge">Verified ✓</div>
+          <h3 class="cgx-cert-title">Oracle SQL Certification</h3>
+          <p class="cgx-cert-issuer"><i class="fas fa-building"></i> Oracle</p>
+          <p class="cgx-cert-date"><i class="fas fa-calendar-alt"></i> 2024</p>
+          <div class="cgx-cert-tags">
+            <span>SQL</span><span>Database</span><span>Oracle DB</span>
+          </div>
+          <div class="cgx-cert-btns">
+            <a href="#" class="cgx-btn cgx-btn-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+            <a href="#" class="cgx-btn cgx-btn-dl"><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cgx-card" data-idx="4"
+           style="--cc:#00e5ff;--cs:0,229,255">
+        <div class="cgx-card-shine"></div>
+        <div class="cgx-collapsed">
+          <span class="cgx-vtitle">Cisco Cyber</span>
+          <span class="cgx-vnum">05</span>
+        </div>
+        <div class="cgx-expanded">
+          <div class="cgx-cert-icon"><i class="fas fa-network-wired"></i></div>
+          <div class="cgx-cert-badge">Verified ✓</div>
+          <h3 class="cgx-cert-title">Intro to Cybersecurity</h3>
+          <p class="cgx-cert-issuer"><i class="fas fa-building"></i> Cisco Networking Academy</p>
+          <p class="cgx-cert-date"><i class="fas fa-calendar-alt"></i> 2024</p>
+          <div class="cgx-cert-tags">
+            <span>Networking</span><span>Cyber Threats</span><span>Cisco</span>
+          </div>
+          <div class="cgx-cert-btns">
+            <a href="#" class="cgx-btn cgx-btn-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+            <a href="#" class="cgx-btn cgx-btn-dl"><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cgx-card" data-idx="5"
+           style="--cc:#ff6a00;--cs:255,106,0">
+        <div class="cgx-card-shine"></div>
+        <div class="cgx-collapsed">
+          <span class="cgx-vtitle">TCS iON</span>
+          <span class="cgx-vnum">06</span>
+        </div>
+        <div class="cgx-expanded">
+          <div class="cgx-cert-icon"><i class="fas fa-briefcase"></i></div>
+          <div class="cgx-cert-badge">Verified ✓</div>
+          <h3 class="cgx-cert-title">TCS iON Career Edge</h3>
+          <p class="cgx-cert-issuer"><i class="fas fa-building"></i> TCS iON</p>
+          <p class="cgx-cert-date"><i class="fas fa-calendar-alt"></i> 2023</p>
+          <div class="cgx-cert-tags">
+            <span>Soft Skills</span><span>Career Readiness</span><span>TCS</span>
+          </div>
+          <div class="cgx-cert-btns">
+            <a href="#" class="cgx-btn cgx-btn-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+            <a href="#" class="cgx-btn cgx-btn-dl"><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cgx-card" data-idx="6"
+           style="--cc:#00ff88;--cs:0,255,136">
+        <div class="cgx-card-shine"></div>
+        <div class="cgx-collapsed">
+          <span class="cgx-vtitle">Python Full Stack</span>
+          <span class="cgx-vnum">07</span>
+        </div>
+        <div class="cgx-expanded">
+          <div class="cgx-cert-icon"><i class="fab fa-python"></i></div>
+          <div class="cgx-cert-badge">Verified ✓</div>
+          <h3 class="cgx-cert-title">Python Full Stack Development</h3>
+          <p class="cgx-cert-issuer"><i class="fas fa-building"></i> Udemy / Online</p>
+          <p class="cgx-cert-date"><i class="fas fa-calendar-alt"></i> 2024</p>
+          <div class="cgx-cert-tags">
+            <span>Python</span><span>Django</span><span>React</span><span>REST API</span>
+          </div>
+          <div class="cgx-cert-btns">
+            <a href="#" class="cgx-btn cgx-btn-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+            <a href="#" class="cgx-btn cgx-btn-dl"><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cgx-card" data-idx="7"
+           style="--cc:#ff2d55;--cs:255,45,85">
+        <div class="cgx-card-shine"></div>
+        <div class="cgx-collapsed">
+          <span class="cgx-vtitle">LeetCode SQL 50</span>
+          <span class="cgx-vnum">08</span>
+        </div>
+        <div class="cgx-expanded">
+          <div class="cgx-cert-icon"><i class="fas fa-code"></i></div>
+          <div class="cgx-cert-badge">Badge ✓</div>
+          <h3 class="cgx-cert-title">LeetCode SQL 50 Badge</h3>
+          <p class="cgx-cert-issuer"><i class="fas fa-building"></i> LeetCode</p>
+          <p class="cgx-cert-date"><i class="fas fa-calendar-alt"></i> 2024</p>
+          <div class="cgx-cert-tags">
+            <span>SQL</span><span>Problem Solving</span><span>LeetCode</span>
+          </div>
+          <div class="cgx-cert-btns">
+            <a href="#" class="cgx-btn cgx-btn-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+            <a href="#" class="cgx-btn cgx-btn-dl"><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cgx-card" data-idx="8"
+           style="--cc:#8b5cf6;--cs:139,92,246">
+        <div class="cgx-card-shine"></div>
+        <div class="cgx-collapsed">
+          <span class="cgx-vtitle">Hack Me If You Can</span>
+          <span class="cgx-vnum">09</span>
+        </div>
+        <div class="cgx-expanded">
+          <div class="cgx-cert-icon"><i class="fas fa-user-secret"></i></div>
+          <div class="cgx-cert-badge">Verified ✓</div>
+          <h3 class="cgx-cert-title">Hack Me If You Can</h3>
+          <p class="cgx-cert-issuer"><i class="fas fa-building"></i> DevTown</p>
+          <p class="cgx-cert-date"><i class="fas fa-calendar-alt"></i> May 2025</p>
+          <div class="cgx-cert-tags">
+            <span>Ethical Hacking</span><span>CTF</span><span>Cyber Basics</span>
+          </div>
+          <div class="cgx-cert-btns">
+            <a href="#" class="cgx-btn cgx-btn-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+            <a href="#" class="cgx-btn cgx-btn-dl"><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="cgx-card" data-idx="9"
+           style="--cc:#ffb300;--cs:255,179,0">
+        <div class="cgx-card-shine"></div>
+        <div class="cgx-collapsed">
+          <span class="cgx-vtitle">Hackathon</span>
+          <span class="cgx-vnum">10</span>
+        </div>
+        <div class="cgx-expanded">
+          <div class="cgx-cert-icon"><i class="fas fa-flag"></i></div>
+          <div class="cgx-cert-badge">Achievement ✓</div>
+          <h3 class="cgx-cert-title">National Cybersecurity Hackathon</h3>
+          <p class="cgx-cert-issuer"><i class="fas fa-building"></i> AetherGrid Team</p>
+          <p class="cgx-cert-date"><i class="fas fa-calendar-alt"></i> 2024</p>
+          <div class="cgx-cert-tags">
+            <span>Hackathon</span><span>Team Lead</span><span>Cyber Defense</span>
+          </div>
+          <div class="cgx-cert-btns">
+            <a href="#" class="cgx-btn cgx-btn-verify"><i class="fas fa-external-link-alt"></i> Verify</a>
+            <a href="#" class="cgx-btn cgx-btn-dl"><i class="fas fa-download"></i> Download</a>
+          </div>
+        </div>
+      </div>
+
+    </div><!-- /cgx-gallery -->
+  </div><!-- /cgx-wrap -->
+
+  <!-- Mobile dots -->
+  <div class="cgx-dots" id="cgxDots"></div>
+
+</section>
+
+<!-- EDUCATION -->
+<section class="section edu-section reveal" id="education">
+  <div class="npc-eyebrow"><span class="npc-line"></span><span>// ACADEMIC RECORD</span><span class="npc-line"></span></div>
+  <h2 class="section-title"><span class="st-bracket"></span> EDUCATION <span class="st-bracket"></span></h2>
+  <div class="npc-title-rule"><span></span><span class="npc-diamond">◆</span><span></span></div>
+  <div class="edu-grid">
+
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front ff-cyan">
+          <div class="flip-icon fi-cyan"><i class="fas fa-graduation-cap"></i></div>
+          <h3>BE — Computer Science &amp; Engineering</h3>
+          <p class="flip-year">2022 – 2026 (Graduated)</p>
+          <p class="flip-hint"><i class="fas fa-sync-alt"></i> Hover to flip</p>
+        </div>
+        <div class="flip-back fb-cyan">
+          <h3>BE — CSE</h3>
+          <p class="fb-inst"><i class="fas fa-university"></i> KLE College of Engineering &amp; Technology, Chikodi</p>
+          <p class="fb-grade"><i class="fas fa-star"></i> CGPA: 7.7 / 10</p>
+          <p class="fb-desc">Graduated with hands-on experience in Python full-stack development and cybersecurity. Active in hackathons, internships, and security research.</p>
+          <div class="fb-tags"><span class="fbt-cyan">Full Stack Dev</span><span class="fbt-cyan">Cybersecurity</span><span class="fbt-cyan">Python</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front ff-purple">
+          <div class="flip-icon fi-purple"><i class="fas fa-school"></i></div>
+          <h3>XII — PCMB</h3>
+          <p class="flip-year">2021</p>
+          <p class="flip-hint"><i class="fas fa-sync-alt"></i> Hover to flip</p>
+        </div>
+        <div class="flip-back fb-purple">
+          <h3>XII — PCMB</h3>
+          <p class="fb-inst"><i class="fas fa-university"></i> KLE Prerana PU College, Hubballi</p>
+          <p class="fb-grade"><i class="fas fa-star"></i> 77%</p>
+          <p class="fb-desc">Physics, Chemistry, Mathematics &amp; Biology. Developed early interest in computing and problem solving.</p>
+          <div class="fb-tags"><span class="fbt-purple">Physics</span><span class="fbt-purple">Chemistry</span><span class="fbt-purple">Mathematics</span></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="flip-card">
+      <div class="flip-inner">
+        <div class="flip-front ff-pink">
+          <div class="flip-icon fi-pink"><i class="fas fa-book"></i></div>
+          <h3>X — Secondary School</h3>
+          <p class="flip-year">2019</p>
+          <p class="flip-hint"><i class="fas fa-sync-alt"></i> Hover to flip</p>
+        </div>
+        <div class="flip-back fb-pink">
+          <h3>X — Secondary School</h3>
+          <p class="fb-inst"><i class="fas fa-school"></i> Government High School, Shiragoan</p>
+          <p class="fb-grade"><i class="fas fa-trophy"></i> 90.40%</p>
+          <p class="fb-desc">Strong academic foundation with distinction. Developed discipline and analytical thinking from an early stage.</p>
+          <div class="fb-tags"><span class="fbt-pink">Distinction</span><span class="fbt-pink">90.40%</span><span class="fbt-pink">2019</span></div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXPERIENCE -->
+<section class="section exp-section reveal" id="experience">
+  <div class="npc-eyebrow"><span class="npc-line"></span><span>// FIELD EXPERIENCE</span><span class="npc-line"></span></div>
+  <h2 class="section-title"><span class="st-bracket"></span> EXPERIENCE <span class="st-bracket"></span></h2>
+  <div class="npc-title-rule"><span></span><span class="npc-diamond">◆</span><span></span></div>
+  <div class="exp-timeline">
+
+    <div class="exp-item exp-reveal">
+      <div class="exp-dot-col">
+        <div class="exp-pulse ep-cyan"></div>
+        <div class="exp-vline evl-cyan"></div>
+      </div>
+      <div class="exp-card ec-cyan">
+        <div class="exp-card-top">
+          <div>
+            <h3>Python Full Stack Developer Intern</h3>
+            <p class="exp-org"><i class="fas fa-building"></i> Dhee Coding Lab</p>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date"><i class="fas fa-calendar-alt"></i> Feb 2026 – Present</span>
+            <span class="exp-badge eb-cyan">Onsite</span>
+          </div>
+        </div>
+        <p class="exp-desc">Building and maintaining full-stack Python web applications. Working across backend APIs, database design, and frontend integration in a hands-on onsite environment.</p>
+        <div class="exp-tags">
+          <span class="etg-cyan">Python</span><span class="etg-cyan">FastAPI</span><span class="etg-cyan">React</span><span class="etg-cyan">PostgreSQL</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item exp-reveal">
+      <div class="exp-dot-col">
+        <div class="exp-pulse ep-purple"></div>
+        <div class="exp-vline evl-purple"></div>
+      </div>
+      <div class="exp-card ec-purple">
+        <div class="exp-card-top">
+          <div>
+            <h3>Cybersecurity &amp; Ethical Hacking Intern</h3>
+            <p class="exp-org"><i class="fas fa-shield-alt"></i> CampusPe</p>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date"><i class="fas fa-calendar-alt"></i> Feb 2026 – May 2026</span>
+            <span class="exp-badge eb-purple">Remote</span>
+          </div>
+        </div>
+        <p class="exp-desc">Conducted vulnerability assessments and ethical hacking exercises on test environments. Delivered security reports and contributed to awareness programs for student communities.</p>
+        <div class="exp-tags">
+          <span class="etg-purple">Nmap</span><span class="etg-purple">Kali Linux</span><span class="etg-purple">Wireshark</span><span class="etg-purple">Vulnerability Assessment</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item exp-reveal">
+      <div class="exp-dot-col">
+        <div class="exp-pulse ep-pink"></div>
+        <div class="exp-vline evl-pink"></div>
+      </div>
+      <div class="exp-card ec-pink">
+        <div class="exp-card-top">
+          <div>
+            <h3>Cyber Forensic Intern</h3>
+            <p class="exp-org"><i class="fas fa-search"></i> Cyber Privilege Pvt. Ltd.</p>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-date"><i class="fas fa-calendar-alt"></i> Aug 2025 – Nov 2025</span>
+            <span class="exp-badge eb-pink">Remote</span>
+          </div>
+        </div>
+        <p class="exp-desc">Assisted in digital forensic investigations — analyzing disk images, recovering deleted artifacts, and preparing chain-of-custody documentation for real-world case support.</p>
+        <div class="exp-tags">
+          <span class="etg-pink">Digital Forensics</span><span class="etg-pink">Log Analysis</span><span class="etg-pink">Python</span><span class="etg-pink">Evidence Handling</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- EXTRACURRICULAR -->
+<section class="section exp-section reveal" id="extracurricular">
+  <div class="npc-eyebrow"><span class="npc-line"></span><span>// BEYOND THE CODE</span><span class="npc-line"></span></div>
+  <h2 class="section-title"><span class="st-bracket"></span> EXTRACURRICULAR <span class="st-bracket"></span></h2>
+  <div class="npc-title-rule"><span></span><span class="npc-diamond">◆</span><span></span></div>
+  <div class="exp-timeline">
+
+    <div class="exp-item exp-reveal">
+      <div class="exp-dot-col">
+        <div class="exp-pulse ep-cyan"></div>
+        <div class="exp-vline evl-cyan"></div>
+      </div>
+      <div class="exp-card ec-cyan">
+        <div class="exp-card-top">
+          <div>
+            <h3>Club Coordinator</h3>
+            <p class="exp-org"><i class="fas fa-users"></i> Native Language Club — KLECET</p>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-badge eb-cyan">Leadership</span>
+          </div>
+        </div>
+        <p class="exp-desc">Organized and coordinated cultural and linguistic events to promote native language awareness among the student community at KLE College of Engineering &amp; Technology.</p>
+        <div class="exp-tags">
+          <span class="etg-cyan">Leadership</span><span class="etg-cyan">Event Management</span><span class="etg-cyan">Community</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item exp-reveal">
+      <div class="exp-dot-col">
+        <div class="exp-pulse ep-yellow"></div>
+        <div class="exp-vline evl-yellow"></div>
+      </div>
+      <div class="exp-card ec-yellow">
+        <div class="exp-card-top">
+          <div>
+            <h3>1st Prize — Poster Presentation</h3>
+            <p class="exp-org"><i class="fas fa-trophy"></i> Stutter Detection Research</p>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-badge eb-yellow">Achievement</span>
+          </div>
+        </div>
+        <p class="exp-desc">Won 1st prize in a poster presentation for the Deep Learning-Based Stutter Detection project, demonstrating research on audio classification and speech disorder detection.</p>
+        <div class="exp-tags">
+          <span class="etg-yellow">Research</span><span class="etg-yellow">Deep Learning</span><span class="etg-yellow">1st Prize</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="exp-item exp-reveal">
+      <div class="exp-dot-col">
+        <div class="exp-pulse ep-purple"></div>
+        <div class="exp-vline evl-purple"></div>
+      </div>
+      <div class="exp-card ec-purple">
+        <div class="exp-card-top">
+          <div>
+            <h3>Hackathon Team Leader</h3>
+            <p class="exp-org"><i class="fas fa-flag"></i> AetherGrid — National Cybersecurity Hackathon</p>
+          </div>
+          <div class="exp-meta">
+            <span class="exp-badge eb-purple">Hackathon</span>
+          </div>
+        </div>
+        <p class="exp-desc">Led team AetherGrid at the National Cybersecurity Hackathon. Coordinated attack-defense strategy, delegated tasks across team members, and delivered a working security solution under competition pressure.</p>
+        <div class="exp-tags">
+          <span class="etg-purple">Team Leadership</span><span class="etg-purple">Cybersecurity</span><span class="etg-purple">Hackathon</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="cxs-section reveal" id="contact">
+
+  <!-- Ambient background layers -->
+  <canvas class="cxs-canvas" id="cxsCanvas"></canvas>
+  <div class="cxs-orb cxs-orb1"></div>
+  <div class="cxs-orb cxs-orb2"></div>
+  <div class="cxs-orb cxs-orb3"></div>
+
+  <div class="cxs-inner">
+
+    <!-- Header -->
+    <div class="cxs-header">
+      <div class="cxs-eyebrow"><span class="cxs-line"></span><span>// SECURE CHANNEL</span><span class="cxs-line cxs-line-r"></span></div>
+      <h2 class="cxs-title">CONTACT <span class="cxs-title-accent">ME</span></h2>
+      <p class="cxs-subtitle">Let's build something secure together.</p>
+    </div>
+
+    <!-- Stack form -->
+    <div class="cxs-stack" id="cxsStack">
+
+      <!-- Layer 1 — Name — Green -->
+      <div class="cxs-layer" data-layer="1" style="--lc:0,255,136;--lo:0px,0px">
+        <div class="cxs-layer-edge"></div>
+        <div class="cxs-layer-body">
+          <label class="cxs-label"><i class="fas fa-user"></i> IDENTITY</label>
+          <input class="cxs-input" type="text" name="from_name" id="cxsName" placeholder="Your full name" autocomplete="off" required>
+          <div class="cxs-cursor-line"></div>
+        </div>
+        <div class="cxs-layer-num">01</div>
+      </div>
+
+      <!-- Layer 2 — Email — Cyan -->
+      <div class="cxs-layer" data-layer="2" style="--lc:0,229,255;--lo:8px,6px">
+        <div class="cxs-layer-edge"></div>
+        <div class="cxs-layer-body">
+          <label class="cxs-label"><i class="fas fa-at"></i> SIGNAL ADDRESS</label>
+          <input class="cxs-input" type="email" name="from_email" id="cxsEmail" placeholder="your@email.com" autocomplete="off" required>
+          <div class="cxs-cursor-line"></div>
+        </div>
+        <div class="cxs-layer-num">02</div>
+      </div>
+
+      <!-- Layer 3 — Phone — Amber -->
+      <div class="cxs-layer" data-layer="3" style="--lc:255,179,0;--lo:16px,12px">
+        <div class="cxs-layer-edge"></div>
+        <div class="cxs-layer-body">
+          <label class="cxs-label"><i class="fas fa-mobile-alt"></i> COMM FREQUENCY</label>
+          <input class="cxs-input" type="tel" name="phone" id="cxsPhone" placeholder="+91 00000 00000" autocomplete="off">
+          <div class="cxs-cursor-line"></div>
+        </div>
+        <div class="cxs-layer-num">03</div>
+      </div>
+
+      <!-- Layer 4 — Message — Purple -->
+      <div class="cxs-layer cxs-layer-tall" data-layer="4" style="--lc:139,92,246;--lo:24px,18px">
+        <div class="cxs-layer-edge"></div>
+        <div class="cxs-layer-body">
+          <label class="cxs-label"><i class="fas fa-terminal"></i> TRANSMISSION</label>
+          <textarea class="cxs-input cxs-textarea" name="message" id="cxsMsg" placeholder="Your message..." rows="4" required></textarea>
+          <div class="cxs-cursor-line"></div>
+        </div>
+        <div class="cxs-layer-num">04</div>
+      </div>
+
+      <!-- Layer 5 — Submit — Orange/Green -->
+      <div class="cxs-layer cxs-layer-btn" data-layer="5" style="--lc:0,255,136;--lo:32px,24px">
+        <div class="cxs-layer-edge"></div>
+        <div class="cxs-layer-body">
+          <button class="cxs-submit" id="cxsSubmit" onclick="cxsSend(event)">
+            <span class="cxs-btn-shine"></span>
+            <span class="cxs-btn-text"><i class="fas fa-paper-plane"></i> TRANSMIT MESSAGE</span>
+            <span class="cxs-btn-ripple" id="cxsRipple"></span>
+          </button>
+        </div>
+        <div class="cxs-layer-num">05</div>
+      </div>
+
+    </div><!-- /cxs-stack -->
+
+    <!-- Social links below -->
+    <div class="cxs-socials">
+      <a href="mailto:shrinidhi@email.com" class="cxs-soc" style="--sc:0,255,136"><i class="fas fa-envelope"></i><span>Email</span></a>
+      <a href="https://github.com/ShrinidhiTotagi" target="_blank" class="cxs-soc" style="--sc:200,200,200"><i class="fab fa-github"></i><span>GitHub</span></a>
+      <a href="https://www.linkedin.com/in/shrinidhi-totagi" target="_blank" class="cxs-soc" style="--sc:0,170,255"><i class="fab fa-linkedin"></i><span>LinkedIn</span></a>
+    </div>
+
+  </div><!-- /cxs-inner -->
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-socials">
+    <a href="https://github.com/ShrinidhiTotagi" target="_blank"><i class="fab fa-github"></i></a>
+    <a href="https://www.linkedin.com/in/shrinidhi-totagi" target="_blank"><i class="fab fa-linkedin"></i></a>
+    <a href="mailto:shrinidhi@email.com"><i class="fas fa-envelope"></i></a>
+  </div>
+  <p>Designed &amp; Built by <span class="hl-cyan">Shrinidhi Totagi</span> · 2026</p>
+  <p class="footer-sub">Building the web. Securing the stack. 🚀🔐</p>
+</footer>
+
+<!-- CERTIFICATION VAULT MODAL -->
+<div id="certVault" class="cv-overlay" aria-hidden="true">
+  <canvas class="cv-canvas" id="cvCanvas"></canvas>
+  <div class="cv-modal" id="cvModal" role="dialog" aria-label="Certification Vault">
+
+    <!-- Header -->
+    <div class="cv-header">
+      <div class="cv-header-left">
+        <div class="cv-header-icon"><i class="fas fa-shield-halved"></i></div>
+        <div>
+          <h2 class="cv-title">CERTIFICATIONS</h2>
+          <p class="cv-subtitle">// Digital Learning Archive</p>
+        </div>
+      </div>
+      <div class="cv-header-right">
+        <div class="cv-total-badge"><span class="cv-total-dot"></span><span id="cvVisibleCount">13</span> TOTAL</div>
+        <button class="cv-close" onclick="vaultClose()" aria-label="Close"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+
+    <!-- Toolbar: filters + search -->
+    <div class="cv-toolbar">
+      <div class="cv-filters" id="cvFilters">
+        <button class="cv-filter cv-filter-active" data-cat="all">All</button>
+        <button class="cv-filter" data-cat="cybersecurity">Cybersecurity</button>
+        <button class="cv-filter" data-cat="forensics">Digital Forensics</button>
+        <button class="cv-filter" data-cat="programming">Programming</button>
+        <button class="cv-filter" data-cat="professional">Professional</button>
+        <button class="cv-filter" data-cat="networking">Networking</button>
+        <button class="cv-filter" data-cat="python">Python</button>
+        <button class="cv-filter" data-cat="hackathon">Hackathons</button>
+        <button class="cv-filter" data-cat="internship">Internships</button>
+        <button class="cv-filter" data-cat="achievement">Achievements</button>
+        <button class="cv-filter" data-cat="badge">Badges</button>
+      </div>
+      <div class="cv-search-wrap">
+        <i class="fas fa-search cv-search-icon"></i>
+        <input class="cv-search" id="cvSearch" type="text" placeholder="Search certificates..." autocomplete="off">
+      </div>
+    </div>
+
+    <!-- Grid -->
+    <div class="cv-grid" id="cvGrid"></div>
+
+    <!-- Empty state -->
+    <div class="cv-empty" id="cvEmpty" style="display:none">
+      <i class="fas fa-search"></i>
+      <p>No certificates match your search.</p>
+    </div>
+
+  </div>
+</div>
+
+<!-- CERT DETAIL POPUP -->
+<div id="certDetail" class="cd-overlay" aria-hidden="true">
+  <div class="cd-popup" id="cdPopup">
+    <button class="cd-close" onclick="detailClose()" aria-label="Close"><i class="fas fa-times"></i></button>
+    <div class="cd-preview" id="cdPreview"></div>
+    <div class="cd-body">
+      <div class="cd-badge" id="cdBadge"></div>
+      <h3 class="cd-title" id="cdTitle"></h3>
+      <div class="cd-meta">
+        <span id="cdIssuer"></span>
+        <span id="cdDate"></span>
+        <span id="cdId"></span>
+      </div>
+      <div class="cd-divider"></div>
+      <p class="cd-desc" id="cdDesc"></p>
+      <div class="cd-skills-label">Skills Learned</div>
+      <div class="cd-skills" id="cdSkills"></div>
+      <div class="cd-actions">
+        <a href="#" class="cd-btn cd-btn-verify" id="cdVerify" target="_blank"><i class="fas fa-external-link-alt"></i> Verify Credential</a>
+        <a href="#" class="cd-btn cd-btn-dl" id="cdDl"><i class="fas fa-download"></i> Download PDF</a>
+        <button class="cd-btn cd-btn-nav" id="cdPrev" onclick="detailNav(-1)"><i class="fas fa-chevron-left"></i> Prev</button>
+        <button class="cd-btn cd-btn-nav" id="cdNext" onclick="detailNav(1)">Next <i class="fas fa-chevron-right"></i></button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- PROJECT DETAIL MODAL -->
+<div id="projModal" class="proj-modal hidden">
+  <div class="proj-modal-box">
+    <button class="pm-close" onclick="closeProjModal()"><i class="fas fa-times"></i></button>
+    <div class="pm-gallery">
+      <div class="pm-gallery-slides" id="pmSlides"></div>
+      <button class="pm-gallery-prev" onclick="pmSlide(-1)"><i class="fas fa-chevron-left"></i></button>
+      <button class="pm-gallery-next" onclick="pmSlide(1)"><i class="fas fa-chevron-right"></i></button>
+      <div class="pm-gallery-dots" id="pmDots"></div>
+    </div>
+    <div class="pm-content">
+      <div class="pm-header">
+        <div class="pm-icon" id="pmIcon"></div>
+        <div class="pm-title-block">
+          <h2 id="pmTitle"></h2>
+          <div class="pm-action-links" id="pmLinks"></div>
+        </div>
+      </div>
+      <div class="pm-divider"></div>
+      <div class="pm-section-label"><i class="fas fa-align-left"></i> Overview</div>
+      <p class="pm-overview" id="pmOverview"></p>
+      <div class="pm-section-label"><i class="fas fa-star"></i> Key Features</div>
+      <div class="pm-features-grid" id="pmFeatures"></div>
+      <div class="pm-section-label"><i class="fas fa-layer-group"></i> Tech Stack</div>
+      <div class="pm-stack tags" id="pmStack"></div>
+      <div class="pm-divider"></div>
+      <div class="pm-two-col">
+        <div class="pm-block">
+          <div class="pm-section-label"><i class="fas fa-exclamation-circle"></i> Challenges</div>
+          <p id="pmChallenges"></p>
+        </div>
+        <div class="pm-block">
+          <div class="pm-section-label"><i class="fas fa-trophy"></i> Outcome</div>
+          <p id="pmOutcome"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+<script src="js/bg.js"></script>
+<script src="js/main.js"></script>
+<script src="js/emailjs-enhanced.js"></script>
+<script src="js/visitor-collector.js"></script>
+<script>
+/* ============================================================
+   CONTACT XS — Canvas grid + particles + send
+   ============================================================ */
+(function(){
+  const canvas = document.getElementById('cxsCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  let W, H, particles = [], animId;
+
+  function resize() {
+    const sec = canvas.parentElement;
+    W = canvas.width  = sec.offsetWidth;
+    H = canvas.height = sec.offsetHeight;
+  }
+  resize();
+  window.addEventListener('resize', resize);
+
+  // Particles
+  for (let i = 0; i < 40; i++) {
+    particles.push({
+      x: Math.random() * 2000,
+      y: Math.random() * 1200,
+      r: Math.random() * 1.5 + 0.3,
+      vx: (Math.random() - 0.5) * 0.3,
+      vy: (Math.random() - 0.5) * 0.3,
+      a: Math.random()
+    });
+  }
+
+  const COLORS = ['0,255,136','0,229,255','139,92,246','255,179,0'];
+
+  function draw() {
+    ctx.clearRect(0, 0, W, H);
+
+    // Cyber grid
+    const gs = 60;
+    ctx.strokeStyle = 'rgba(0,255,136,0.06)';
+    ctx.lineWidth = 0.5;
+    for (let x = 0; x < W; x += gs) {
+      ctx.beginPath(); ctx.moveTo(x, 0); ctx.lineTo(x, H); ctx.stroke();
+    }
+    for (let y = 0; y < H; y += gs) {
+      ctx.beginPath(); ctx.moveTo(0, y); ctx.lineTo(W, y); ctx.stroke();
+    }
+
+    // Particles
+    particles.forEach(p => {
+      p.x += p.vx; p.y += p.vy;
+      if (p.x < 0) p.x = W; if (p.x > W) p.x = 0;
+      if (p.y < 0) p.y = H; if (p.y > H) p.y = 0;
+      p.a += 0.008;
+      const alpha = (Math.sin(p.a) * 0.5 + 0.5) * 0.6;
+      const c = COLORS[Math.floor(p.x / W * COLORS.length)];
+      ctx.beginPath();
+      ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+      ctx.fillStyle = `rgba(${c},${alpha})`;
+      ctx.fill();
+    });
+
+    animId = requestAnimationFrame(draw);
+  }
+
+  // Only run when section is visible
+  const sec = document.getElementById('contact');
+  const io = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) { draw(); }
+    else { cancelAnimationFrame(animId); }
+  }, { threshold: 0.05 });
+  if (sec) io.observe(sec);
+
+})();
+
+/* ============================================================
+   CERTIFICATIONS GALLERY — CGX SYSTEM
+   ============================================================ */
+(function(){
+  const gallery = document.getElementById('cgxGallery');
+  if (!gallery) return;
+  const cards = Array.from(gallery.querySelectorAll('.cgx-card'));
+  const dotsWrap = document.getElementById('cgxDots');
+  let activeIdx = 0;
+
+  // Build mobile dots
+  cards.forEach((_, i) => {
+    const d = document.createElement('button');
+    d.className = 'cgx-dot' + (i === 0 ? ' cgx-dot-active' : '');
+    d.addEventListener('click', () => setActive(i));
+    dotsWrap.appendChild(d);
+  });
+
+  function setActive(idx) {
+    cards[activeIdx].classList.remove('cgx-active');
+    activeIdx = idx;
+    cards[activeIdx].classList.add('cgx-active');
+    // update dots
+    dotsWrap.querySelectorAll('.cgx-dot').forEach((d, i) => {
+      d.classList.toggle('cgx-dot-active', i === idx);
+    });
+  }
+
+  // Desktop hover
+  cards.forEach((card, i) => {
+    card.addEventListener('mouseenter', () => {
+      if (window.innerWidth > 600) setActive(i);
+    });
+  });
+
+  // Mobile scroll snap sync
+  gallery.addEventListener('scroll', () => {
+    if (window.innerWidth > 600) return;
+    const scrollLeft = gallery.scrollLeft;
+    const cardW = 260 + 12;
+    const idx = Math.round(scrollLeft / cardW);
+    if (idx !== activeIdx) {
+      activeIdx = idx;
+      dotsWrap.querySelectorAll('.cgx-dot').forEach((d, i) => {
+        d.classList.toggle('cgx-dot-active', i === idx);
+      });
+    }
+  });
+
+  // Subtle parallax on mouse move over section
+  const sec = document.getElementById('certifications');
+  if (sec) {
+    sec.addEventListener('mousemove', e => {
+      if (window.innerWidth < 900) return;
+      const rect = sec.getBoundingClientRect();
+      const cx = (e.clientX - rect.left) / rect.width - 0.5;
+      const cy = (e.clientY - rect.top)  / rect.height - 0.5;
+      gallery.style.transform = `perspective(1200px) rotateY(${cx * 3}deg) rotateX(${cy * -2}deg)`;
+    });
+    sec.addEventListener('mouseleave', () => {
+      gallery.style.transform = '';
+    });
+  }
+})();
+
+/* ============================================================
+   CERTIFICATION VAULT — JS
+   ============================================================ */
+const CV_DATA = [
+  { id:0, icon:'fas fa-sitemap', color:'0,229,255', cat:'programming', name:'DSA Certificate', issuer:'Apna College', year:'Certificate', file:'certificate-dsa%20apna%20college.pdf', desc:'Certificate in data structures and algorithms from Apna College.', skills:['Data Structures','Algorithms','Problem Solving'] },
+  { id:1, icon:'fas fa-shield-alt', color:'0,255,136', cat:'cybersecurity', name:'Cyber Privilege Certificate', issuer:'Cyber Privilege', year:'Certificate', file:'cyber%20privilege.jpeg', desc:'Cybersecurity certificate from Cyber Privilege.', skills:['Cybersecurity','Security Training'] },
+  { id:2, icon:'fas fa-building', color:'0,229,255', cat:'professional', name:'Deloitte Certificate', issuer:'Deloitte', year:'Certificate', file:'Delloite.pdf', desc:'Professional certificate issued by Deloitte.', skills:['Professional Development','Technology'] },
+  { id:3, icon:'fas fa-user-secret', color:'139,92,246', cat:'cybersecurity', name:'Cybersecurity Certificate', issuer:'DevTown', year:'Certificate', file:'devtown.pdf', desc:'Cybersecurity certificate issued by DevTown.', skills:['Cybersecurity','Ethical Hacking'] },
+  { id:4, icon:'fas fa-flag', color:'255,179,0', cat:'achievement', name:'Hack the Future Hackathon', issuer:'Hackathon', year:'Achievement', file:'Hack%20the%20furuture-Hackton.jpeg', desc:'Hackathon achievement certificate.', skills:['Hackathon','Competition','Teamwork'] },
+  { id:5, icon:'fas fa-shield-alt', color:'255,45,85', cat:'cybersecurity', name:'HackingFix Certificate', issuer:'HackingFix', year:'Certificate', file:'HackingFix.pdf', desc:'Cybersecurity certificate issued by HackingFix.', skills:['Cybersecurity','Ethical Hacking'] },
+  { id:6, icon:'fas fa-shield-alt', color:'0,255,136', cat:'cybersecurity', name:'HP Certificate', issuer:'HP', year:'Certificate', file:'HP.pdf', desc:'Cybersecurity certificate issued by HP.', skills:['Cybersecurity','Technology'] },
+  { id:7, icon:'fas fa-code', color:'139,92,246', cat:'professional', name:'Infosys Certificate', issuer:'Infosys', year:'Certificate', file:'infosys.pdf', desc:'Professional certificate issued by Infosys.', skills:['Professional Development','Technology'] },
+  { id:8, icon:'fas fa-user-shield', color:'0,229,255', cat:'badge', name:'ISC2 Candidate', issuer:'ISC2', year:'Candidate', file:'isc2-candidate.png', desc:'ISC2 candidate credential.', skills:['Cybersecurity','Professional Development'] },
+  { id:9, icon:'fas fa-skull-crossbones', color:'255,106,0', cat:'cybersecurity', name:'Offensive Security Certificate', issuer:'Offensive Security', year:'Certificate', file:'offensive_certificate.pdf', desc:'Offensive security certificate.', skills:['Offensive Security','Ethical Hacking'] },
+  { id:10, icon:'fas fa-briefcase', color:'255,179,0', cat:'professional', name:'CampusPe Certificate', issuer:'CampusPe', year:'2025-26', file:'Shrinidhi%20Mahalingappa%20Totagi-CampusPe_Mgt_HR_2025-26_035%20.pdf', desc:'Professional certificate from CampusPe.', skills:['Management','Human Resources','Professional Development'] },
+  { id:11, icon:'fas fa-certificate', color:'0,229,255', cat:'professional', name:'Professional Certificate', issuer:'Shrinidhi Totagi', year:'Certificate', file:'Shrinidhi%20Totagi%20-%20Certificate.pdf', desc:'Professional certificate added to the portfolio.', skills:['Professional Development','Certificate'] },
+  { id:12, icon:'fas fa-trophy', color:'255,45,85', cat:'achievement', name:'Techflix Hackathon Certificate', issuer:'Techflix', year:'Achievement', file:'techflix%20Certificates%20hackathon.pdf', desc:'Hackathon achievement certificate from Techflix.', skills:['Hackathon','Competition','Achievement'] }
+];
+
+function renderCertificateGallery() {
+  const gallery = document.getElementById('cgxGallery');
+  const dots = document.getElementById('cgxDots');
+  if (!gallery || !dots) return;
+  gallery.innerHTML = CV_DATA.map((c, i) => `
+    <div class="cgx-card${i === 0 ? ' cgx-active' : ''}" data-idx="${i}" style="--cc:rgb(${c.color});--cs:${c.color}">
+      <div class="cgx-card-shine"></div>
+      <div class="cgx-collapsed"><span class="cgx-vtitle">${c.name}</span><span class="cgx-vnum">${String(i + 1).padStart(2, '0')}</span></div>
+      <div class="cgx-expanded">
+        <div class="cgx-cert-icon"><i class="${c.icon}"></i></div>
+        <div class="cgx-cert-badge">${c.cat === 'achievement' ? 'Achievement' : 'Verified'}</div>
+        <h3 class="cgx-cert-title">${c.name}</h3>
+        <p class="cgx-cert-issuer"><i class="fas fa-building"></i> ${c.issuer}</p>
+        <p class="cgx-cert-date"><i class="fas fa-calendar-alt"></i> ${c.year}</p>
+        <div class="cgx-cert-tags">${c.skills.slice(0, 3).map(skill => `<span>${skill}</span>`).join('')}</div>
+        <div class="cgx-cert-btns"><a href="certificates/${c.file}" class="cgx-btn cgx-btn-verify" target="_blank" rel="noopener"><i class="fas fa-external-link-alt"></i> View</a><a href="certificates/${c.file}" class="cgx-btn cgx-btn-dl" download><i class="fas fa-download"></i> Download</a></div>
+      </div>
+    </div>`).join('');
+  dots.innerHTML = CV_DATA.map((_, i) => `<button class="cgx-dot${i === 0 ? ' cgx-dot-active' : ''}" data-index="${i}" aria-label="Certificate ${i + 1}"></button>`).join('');
+  const cards = [...gallery.querySelectorAll('.cgx-card')];
+  const setActive = index => { cards.forEach((card, i) => card.classList.toggle('cgx-active', i === index)); dots.querySelectorAll('.cgx-dot').forEach((dot, i) => dot.classList.toggle('cgx-dot-active', i === index)); };
+  cards.forEach((card, i) => card.addEventListener('mouseenter', () => { if (window.innerWidth > 600) setActive(i); }));
+  dots.querySelectorAll('.cgx-dot').forEach(dot => dot.addEventListener('click', () => setActive(Number(dot.dataset.index))));
+}
+
+renderCertificateGallery();
+
+let cvActiveFilter = 'all';
+let cvSearchVal = '';
+let cvDetailIdx = 0;
+let cvFilteredIds = CV_DATA.map(c => c.id);
+let cvAnimId;
+
+/* ---- Open / Close vault ---- */
+function vaultOpen() {
+  const overlay = document.getElementById('certVault');
+  overlay.classList.add('cv-open');
+  overlay.setAttribute('aria-hidden','false');
+  document.body.style.overflow = 'hidden';
+  cvRenderGrid();
+  cvStartCanvas();
+}
+function vaultClose() {
+  const overlay = document.getElementById('certVault');
+  overlay.classList.remove('cv-open');
+  overlay.setAttribute('aria-hidden','true');
+  document.body.style.overflow = '';
+  cancelAnimationFrame(cvAnimId);
+}
+
+/* ---- Canvas ambient ---- */
+function cvStartCanvas() {
+  const canvas = document.getElementById('cvCanvas');
+  if (!canvas) return;
+  const ctx = canvas.getContext('2d');
+  canvas.width  = window.innerWidth;
+  canvas.height = window.innerHeight;
+  const pts = Array.from({length:50}, () => ({
+    x: Math.random()*canvas.width, y: Math.random()*canvas.height,
+    r: Math.random()*1.4+0.3, vx:(Math.random()-0.5)*0.25, vy:(Math.random()-0.5)*0.25, a:Math.random()*Math.PI*2
+  }));
+  const COLS = ['0,255,136','0,229,255','139,92,246'];
+  function frame() {
+    ctx.clearRect(0,0,canvas.width,canvas.height);
+    // grid
+    ctx.strokeStyle='rgba(0,255,136,0.04)'; ctx.lineWidth=0.5;
+    for(let x=0;x<canvas.width;x+=60){ctx.beginPath();ctx.moveTo(x,0);ctx.lineTo(x,canvas.height);ctx.stroke();}
+    for(let y=0;y<canvas.height;y+=60){ctx.beginPath();ctx.moveTo(0,y);ctx.lineTo(canvas.width,y);ctx.stroke();}
+    // particles
+    pts.forEach(p=>{
+      p.x+=p.vx; p.y+=p.vy; p.a+=0.007;
+      if(p.x<0)p.x=canvas.width; if(p.x>canvas.width)p.x=0;
+      if(p.y<0)p.y=canvas.height; if(p.y>canvas.height)p.y=0;
+      const alpha=(Math.sin(p.a)*0.5+0.5)*0.5;
+      const c=COLS[Math.floor(p.x/canvas.width*COLS.length)];
+      ctx.beginPath(); ctx.arc(p.x,p.y,p.r,0,Math.PI*2);
+      ctx.fillStyle=`rgba(${c},${alpha})`; ctx.fill();
+    });
+    cvAnimId = requestAnimationFrame(frame);
+  }
+  frame();
+}
+
+/* ---- Render grid ---- */
+function cvRenderGrid() {
+  const grid = document.getElementById('cvGrid');
+  const empty = document.getElementById('cvEmpty');
+  const countEl = document.getElementById('cvVisibleCount');
+  const q = cvSearchVal.toLowerCase();
+  const filtered = CV_DATA.filter(c => {
+    const catMatch = cvActiveFilter === 'all' || c.cat === cvActiveFilter;
+    const searchMatch = !q || c.name.toLowerCase().includes(q) || c.issuer.toLowerCase().includes(q) || c.cat.toLowerCase().includes(q);
+    return catMatch && searchMatch;
+  });
+  cvFilteredIds = filtered.map(c => c.id);
+  countEl.textContent = filtered.length;
+  if (!filtered.length) {
+    grid.innerHTML = ''; grid.style.display='none'; empty.style.display='block'; return;
+  }
+  grid.style.display=''; empty.style.display='none';
+  grid.innerHTML = filtered.map((c,i) => `
+    <div class="cv-card" style="--cvc:${c.color};animation-delay:${i*0.04}s" onclick="detailOpen(${c.id})">
+      <div class="cv-card-preview">
+        <div class="cv-card-preview-glow"></div>
+        <i class="${c.icon}"></i>
+      </div>
+      <div class="cv-card-body">
+        <div class="cv-card-cat">${c.cat}</div>
+        <div class="cv-card-name">${c.name}</div>
+        <div class="cv-card-issuer"><i class="fas fa-building"></i>${c.issuer}</div>
+        <div class="cv-card-year">${c.year}</div>
+      </div>
+    </div>`).join('');
+}
+
+/* ---- Filters ---- */
+document.getElementById('cvFilters').addEventListener('click', e => {
+  const btn = e.target.closest('.cv-filter');
+  if (!btn) return;
+  document.querySelectorAll('.cv-filter').forEach(b => b.classList.remove('cv-filter-active'));
+  btn.classList.add('cv-filter-active');
+  cvActiveFilter = btn.dataset.cat;
+  cvRenderGrid();
+});
+
+/* ---- Search ---- */
+document.getElementById('cvSearch').addEventListener('input', e => {
+  cvSearchVal = e.target.value;
+  cvRenderGrid();
+});
+
+/* ---- Close on overlay click / ESC ---- */
+document.getElementById('certVault').addEventListener('click', e => {
+  if (e.target === document.getElementById('certVault')) vaultClose();
+});
+document.addEventListener('keydown', e => {
+  if (e.key === 'Escape') {
+    if (document.getElementById('certDetail').classList.contains('cd-open')) detailClose();
+    else vaultClose();
+  }
+});
+
+/* ---- Detail popup ---- */
+function detailOpen(id) {
+  cvDetailIdx = cvFilteredIds.indexOf(id);
+  if (cvDetailIdx === -1) cvDetailIdx = 0;
+  renderDetail(id);
+  const overlay = document.getElementById('certDetail');
+  overlay.classList.add('cd-open');
+  overlay.setAttribute('aria-hidden','false');
+}
+function detailClose() {
+  const overlay = document.getElementById('certDetail');
+  overlay.classList.remove('cd-open');
+  overlay.setAttribute('aria-hidden','true');
+}
+function detailNav(dir) {
+  cvDetailIdx = (cvDetailIdx + dir + cvFilteredIds.length) % cvFilteredIds.length;
+  renderDetail(cvFilteredIds[cvDetailIdx]);
+}
+function renderDetail(id) {
+  const c = CV_DATA.find(x => x.id === id);
+  if (!c) return;
+  const col = `rgb(${c.color})`;
+  document.getElementById('cdPreview').innerHTML =
+    `<div class="cd-preview-glow" style="background:${col}"></div><i class="${c.icon}" style="color:${col};position:relative;z-index:1"></i>`;
+  document.getElementById('cdPreview').style.background = `rgba(${c.color},0.08)`;
+  const badge = document.getElementById('cdBadge');
+  badge.textContent = c.cat === 'achievement' ? 'Achievement' : c.cat === 'badge' ? 'Badge' : 'Verified';
+  badge.style.color = col;
+  badge.style.borderColor = `rgba(${c.color},0.4)`;
+  badge.style.background = `rgba(${c.color},0.08)`;
+  document.getElementById('cdTitle').textContent = c.name;
+  document.getElementById('cdIssuer').innerHTML = `<i class="fas fa-building"></i>${c.issuer}`;
+  document.getElementById('cdDate').innerHTML   = `<i class="fas fa-calendar-alt"></i>${c.year}`;
+  document.getElementById('cdId').innerHTML     = `<i class="fas fa-fingerprint"></i>${c.credId}`;
+  document.getElementById('cdDesc').textContent = c.desc;
+  document.getElementById('cdSkills').innerHTML = c.skills.map(s=>`<span>${s}</span>`).join('');
+  const certificateUrl = `certificates/${c.file}`;
+  document.getElementById('cdVerify').href = certificateUrl;
+  document.getElementById('cdVerify').target = '_blank';
+  document.getElementById('cdVerify').rel = 'noopener';
+  document.getElementById('cdDl').href = certificateUrl;
+  document.getElementById('cdDl').setAttribute('download', '');
+  document.getElementById('cdVerify').style.color = col;
+  document.getElementById('cdVerify').style.borderColor = `rgba(${c.color},0.4)`;
+  document.getElementById('cdVerify').style.background = `rgba(${c.color},0.06)`;
+  // nav visibility
+  document.getElementById('cdPrev').style.display = cvFilteredIds.length > 1 ? '' : 'none';
+  document.getElementById('cdNext').style.display = cvFilteredIds.length > 1 ? '' : 'none';
+}
+document.getElementById('certDetail').addEventListener('click', e => {
+  if (e.target === document.getElementById('certDetail')) detailClose();
+});
+
+/* ---- Submit handler ---- */
+function cxsSend(e) {
+  e.preventDefault();
+  const btn = document.getElementById('cxsSubmit');
+  const ripple = document.getElementById('cxsRipple');
+  const name  = document.getElementById('cxsName').value.trim();
+  const email = document.getElementById('cxsEmail').value.trim();
+  const msg   = document.getElementById('cxsMsg').value.trim();
+  if (!name || !email || !msg) {
+    btn.style.borderColor = '#ff4560';
+    btn.style.color = '#ff4560';
+    setTimeout(() => { btn.style.borderColor = ''; btn.style.color = ''; }, 1200);
+    return;
+  }
+  // Ripple
+  ripple.classList.remove('active');
+  void ripple.offsetWidth;
+  ripple.classList.add('active');
+
+  btn.querySelector('.cxs-btn-text').innerHTML = '<i class="fas fa-spinner fa-spin"></i> TRANSMITTING...';
+  btn.disabled = true;
+
+  emailjs.send('service_9n4j8vb', 'template_e0nit97', {
+    from_name: name,
+    from_email: email,
+    message: msg
+  }).then(() => {
+    btn.querySelector('.cxs-btn-text').innerHTML = '<i class="fas fa-check"></i> MESSAGE SENT';
+    btn.style.borderColor = '#00ff88';
+    btn.style.color = '#00ff88';
+    document.getElementById('cxsName').value = '';
+    document.getElementById('cxsEmail').value = '';
+    document.getElementById('cxsPhone').value = '';
+    document.getElementById('cxsMsg').value = '';
+    setTimeout(() => {
+      btn.querySelector('.cxs-btn-text').innerHTML = '<i class="fas fa-paper-plane"></i> TRANSMIT MESSAGE';
+      btn.disabled = false;
+      btn.style.borderColor = '';
+      btn.style.color = '';
+    }, 3000);
+  }).catch(() => {
+    btn.querySelector('.cxs-btn-text').innerHTML = '<i class="fas fa-times"></i> FAILED — RETRY';
+    btn.style.borderColor = '#ff4560';
+    btn.style.color = '#ff4560';
+    btn.disabled = false;
+    setTimeout(() => {
+      btn.querySelector('.cxs-btn-text').innerHTML = '<i class="fas fa-paper-plane"></i> TRANSMIT MESSAGE';
+      btn.style.borderColor = '';
+      btn.style.color = '';
+    }, 3000);
+  });
+}
+</script>
+</body>
+</html>

@@ -86,7 +86,7 @@ function collectVisitorInfo() {
 
     // Network
     connection_type:   conn.effectiveType || conn.type || "Unknown",
-    online_status:     navigator.onLine ? "Online" : "Offline",
+    // online_status:     navigator.onLine ? "Online" : "Offline",
 
     // Hardware
     webgl_support:     webgl.support,
