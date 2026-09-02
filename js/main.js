@@ -52,15 +52,66 @@ window.addEventListener("scroll", () => {
   document.getElementById("navbar").classList.toggle("scrolled", window.scrollY > 50);
 });
 
+/* ===== NAVBAR SCROLL-SPY ===== */
+const navbar = document.getElementById("navbar");
+const navLinks = [...document.querySelectorAll(".nav-links a[href^='#']")];
+const sections = navLinks
+  .map(link => document.querySelector(link.getAttribute("href")))
+  .filter(Boolean);
+const visibleSections = new Map();
+
+function setActiveSection(sectionId) {
+  navLinks.forEach(link => {
+    const isActive = link.getAttribute("href") === `#${sectionId}`;
+    link.classList.toggle("active", isActive);
+    if (isActive) link.setAttribute("aria-current", "page");
+    else link.removeAttribute("aria-current");
+  });
+}
+
+function getScrollOffset() {
+  return navbar ? navbar.offsetHeight + 12 : 12;
+}
+
+const scrollSpyObserver = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) visibleSections.set(entry.target.id, entry);
+    else visibleSections.delete(entry.target.id);
+  });
+  const currentSection = [...visibleSections.values()]
+    .sort((first, second) => first.boundingClientRect.top - second.boundingClientRect.top)[0];
+  if (currentSection) setActiveSection(currentSection.target.id);
+}, {
+  rootMargin: `-${getScrollOffset()}px 0px -55% 0px`,
+  threshold: 0
+});
+sections.forEach(section => scrollSpyObserver.observe(section));
+
+function updateEdgeSection() {
+  if (window.scrollY <= getScrollOffset()) {
+    setActiveSection(sections[0]?.id);
+  } else if (window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 2) {
+    setActiveSection(sections[sections.length - 1]?.id);
+  }
+}
+
+window.addEventListener("scroll", updateEdgeSection, { passive: true });
+updateEdgeSection();
+
 /* ===== SMOOTH NAV LINKS ===== */
-document.querySelectorAll(".nav-links a").forEach(link => {
+navLinks.forEach(link => {
   link.addEventListener("click", e => {
     e.preventDefault();
     const target = document.querySelector(link.getAttribute("href"));
-    if (target) target.scrollIntoView({ behavior: "smooth" });
+    if (target) {
+      window.scrollTo({
+        top: target.getBoundingClientRect().top + window.scrollY - getScrollOffset(),
+        behavior: "smooth"
+      });
+    }
     // close mobile menu
-    const navLinks = document.getElementById("navLinks");
-    navLinks.style.display = "";
+    const mobileNavLinks = document.getElementById("navLinks");
+    mobileNavLinks.style.display = "";
   });
 });
 
